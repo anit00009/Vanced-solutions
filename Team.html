@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team | Vanced Solution</title>
+    <!-- Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="company-logo">
+                <a href="Vanced-solution.html">
+                    <img src="Images/vanced-logo (3) 1.png" alt="Vanced Solution Logo" height="40">
+                </a>
+            </div>
+
+            <nav class="d-none d-lg-block">
+                <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+                    <li><a href="Services.html" class="nav-link-custom fs-14">Services</a></li>
+                    <li><a href="Portfolio.html" class="nav-link-custom fs-14">Portfolio</a></li>
+                    <li><a href="Team.html" class="nav-link-custom fs-14">Team</a></li>
+                    <li><a href="Insight.html" class="nav-link-custom fs-14">Insights</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions d-flex align-items-center gap-3">
+                <button class="booking-btn d-none d-sm-block">Request Consultation</button>
+
+                <!-- Hamburger Menu -->
+                <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNav">
+            <div class="mobile-nav-content">
+                <ul class="mobile-nav-list list-unstyled">
+                    <li><a href="Services.html" class="mobile-nav-link fs-16">Services</a></li>
+                    <li><a href="Portfolio.html" class="mobile-nav-link fs-16">Portfolio</a></li>
+                    <li><a href="Team.html" class="mobile-nav-link fs-16">Team</a></li>
+                    <li><a href="Insight.html" class="mobile-nav-link fs-16">Insights</a></li>
+                </ul>
+                <div class="mt-4">
+                    <button class="booking-btn w-100">Request Consultation</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Content Goes Here -->
+        <section class="hero-section text-center" style="padding: 100px 20px;">
+            <h1 class="main-heading fs-48">Team</h1>
+        </section>
+    </main>
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-wrapper">
+                <div>
+                    <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="">
+                    <p>© 2026 Vanced Solutions.<br>
+                        Architectural Serenity in Code.</p>
+                    <div><img src="Images/Link.png" alt=""></div>
+                </div>
+                <div>
+                    <h2 class="mb-24 fs-16">Capabilities</h2>
+                    <p class="fs-14">AI-First Dev</p>
+                    <p class="fs-14">Web/Mobile</p>
+                    <p class="fs-14">Data Consulting</p>
+                    <p class="fs-14 mb-0">Cloud Architecture</p>
+                </div>
+                <div>
+                    <h2 class="mb-24 fs-16">Company</h2>
+                    <p class="fs-14">Success Stories</p>
+                    <p class="fs-14">Methodology</p>
+                    <p class="fs-14">Insights</p>
+                    <p class="fs-14 mb-0">Careers</p>
+                </div>
+                <div>
+                    <h2 class="mb-24 fs-16">Capabilities</h2>
+                    <p class="fs-14">Privacy Policy</p>
+                    <p class="fs-14">Contact Us</p>
+                    <p class="fs-14">Support Portal</p>
+                    <p class="fs-14 mb-0">Terms</p>
+                </div>
+            </div>
+
+            <div><img src="Images/Group 3473.png" alt=""></div>
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNav = document.getElementById('mobileNav');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (mobileNav.classList.contains('active')) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
