@@ -155,7 +155,7 @@
             </p>
           </div>
 
-          <div class="d-flex gap-24 mb-24">
+          <div class="d-grid grid-cols-1 grid-md-cols-2  gap-24 mb-24">
             <div class="service-card bg-light">
               <img class="mb-12" src="Images/new-product 1.png" alt="" />
               <h3 class="fs-20 mb-3">Product Strategy & Research</h3>
@@ -173,7 +173,7 @@
               </p>
             </div>
           </div>
-          <div class="d-flex gap-24 mb-24">
+          <div class="d-grid grid-cols-1 grid-md-cols-3 gap-24 mb-24">
             <div class="service-card bg-light">
               <img class="mb-12" src="Images/custom 1.png" alt="" />
               <h3 class="fs-20 mb-3">Web App Engineering</h3>
@@ -199,7 +199,7 @@
               </p>
             </div>
           </div>
-          <div class="d-flex software-rescue-wrapper">
+          <div class=" grid-cols-1 d-grid grid-md-cols-2 software-rescue-wrapper">
             <div class="software-rescue-card">
               <h1 class="text-light mb-16">Software Rescue & Audit</h1>
               <p class="text-light">
@@ -230,7 +230,7 @@
             </p>
           </div>
 
-          <div class="our-engineering-items">
+          <div class="our-engineering-items d-grid grid-lg-cols-4 grid-md-cols-2 grid-cols-1 gap-32">
             <div class="our-engineering-card">
               <div class="fs-24 circle-number fw-bold">1</div>
               <h2 class="fs-18 fw-bold">Discovery & Audit</h2>
@@ -275,7 +275,7 @@ audits before launch.
             </p>
           </div>
 
-          <div class="four-column-grid gap-32">
+          <div class="d-grid grid-lg-cols-4 grid-md-cols-2 grid-cols-1 gap-32">
             <div class="service-domain-card">
               <img
                 src="Images/d941ff805d3b61f159a1edc9a1b63622b7edc254.png"
@@ -328,7 +328,7 @@ audits before launch.
 
       <section class="bg-light technical-ecosystem-section">
        <div class="container">
-<div class="technical-ecosystem-wrapper">
+<div class="technical-ecosystem-wrapper d-grid grid-cols-1 grid-lg-cols-3 gap-48">
   <div>
     <h2 class="mb-24 fw-bold">Technical Ecosystem</h2>
     <p class="mb-24 fs-16 text-gray">Our stack is chosen for stability, scalability, and
@@ -449,9 +449,9 @@ architectures.</p>
       </section>
       <section class="service-contact-section bg-light">
         <div class="container">
-          <div class="service-content-wrapper d-flex">
-            <div class="p-24 content">
-              <h1 class="fs-48 mb-32 text-light">Initiate Architecture</h1>
+          <div class="service-content-wrapper d-grid grid-cols-1 grid-md-cols-2 gap-24">
+            <div class="p-24  content">
+              <h1 class="fs-36 mb-32 text-light">Initiate Architecture</h1>
               <p class="fs-20 text-light mb-32">
                 Connect with our solutions architects to discuss your
                 mission-critical requirements and technical landscape.
@@ -462,8 +462,8 @@ architectures.</p>
                     <img src="Images/Icon (3).png" alt="" />
                   </div>
                   <div>
-                    <h1 class="fs-16 mb-0 text-light">Strict NDA Compliance</h1>
-                    <p class="fs-12 mb-0 text-light">
+                    <h1 class="fs-16 mb-0 fw-semibold  text-light">Strict NDA Compliance</h1>
+                    <p class="fs-14 mb-0 text-light-fade">
                       All inquiries are protected by our standard mutual
                       confidentiality agreement.
                     </p>
@@ -474,8 +474,8 @@ architectures.</p>
                     <img src="Images/Icon (2).png" alt="" />
                   </div>
                   <div>
-                    <h1 class="fs-16 mb-0 text-light">Rapid Response</h1>
-                    <p class="fs-12 mb-0 text-gray">
+                    <h1 class="fs-16 mb-0 fw-semibold  text-light">Rapid Response</h1>
+                    <p class="fs-14 mb-0 text-light-fade">
                       Receive a preliminary technical briefing within 24
                       business hours.
                     </p>
@@ -483,35 +483,49 @@ architectures.</p>
                 </div>
               </div>
             </div>
-            <div class="form-container">
+            <div class=" form-wrapper">
               <form class="form">
-                <div class="row">
-                  <div class="input-group">
+                <div class="form-row">
+                  <div class="field-group">
                     <label>FULL NAME</label>
                     <input type="text" placeholder="John Doe" />
                   </div>
 
-                  <div class="input-group">
-                    <label>COMPANY Email</label>
+                  <div class="field-group">
+                    <label>COMPANY</label>
                     <input type="text" placeholder="Acme Inc." />
                   </div>
                 </div>
 
-                <div class="input-group">
-                  <label>Service Interest </label>
-                  <select>
-                    <option>Development</option>
-                  </select>
+                <div class="field-group">
+                  <label>WEBSITE</label>
+                  <input type="text" placeholder="https://" />
                 </div>
 
-                <div class="input-group">
-                  <label>Mission Brief</label>
+                <div class="form-row">
+                  <div class="field-group">
+                    <label>PROJECT TYPE</label>
+                    <select>
+                      <option>Development</option>
+                    </select>
+                  </div>
+
+                  <div class="field-group">
+                    <label>BUDGET RANGE</label>
+                    <select>
+                      <option>$25k - $50k</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field-group">
+                  <label>TELL US ABOUT YOUR MISSION</label>
                   <textarea
                     placeholder="Brief project description..."
                   ></textarea>
                 </div>
 
-                <button class="booking-btn">Request Consultation</button>
+                <button class="booking-btn">Start Conversation</button>
               </form>
             </div>
           </div>
@@ -521,7 +535,7 @@ architectures.</p>
 
     <footer class="footer">
         <div class="container">
-          <div class="footer-wrapper">
+          <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
             <div>
               <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="" />
               <p class="fs-14">
@@ -559,7 +573,7 @@ architectures.</p>
             </div>
           </div>
 
-          <div><img src="Images/Group 3473.png" alt="" /></div>
+          <div><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
         </div>
       </footer>
 
