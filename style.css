@@ -435,7 +435,6 @@ h6 {
 
 /* Hero Section */
 .hero-section {
-  background-color: var(--bg-soft);
   padding: 48px 0 80px;
   overflow: hidden;
   position: relative;
@@ -473,6 +472,7 @@ h6 {
   display: inline-block;
   text-transform: uppercase;
   white-space: nowrap;
+  width: fit-content;
 }
 
 .card_one {
@@ -575,6 +575,9 @@ h6 {
 
 .mb-24 {
   margin-bottom: var(--space-lg);
+}
+.mb-40 {
+  margin-bottom: 40px;
 }
 .mb-48 {
   margin-bottom: var(--space-2xl);
@@ -1295,3 +1298,30 @@ max-width: 650px;
 }
 /* Second angled layer */
 
+
+/*********** Services 2 css *************/
+.services_2_hero {
+  background-image: url("Images/services_2_hero_img.webp");
+  background-size: cover;
+  padding: 122px 0;
+  position: relative;
+  z-index: 1;
+}
+.services_2_hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--bg-gray);
+  opacity: 0.8;
+  z-index: -1;
+}
+.services_2_hero .hero-content {
+  max-width: 672px;
+}
+
+.services_2_hero .hero-content .badge-item {
+  line-height: 1em;
+}
+.services_2_hero .hero-content .main-heading {
+  font-size: 96px;
+}
