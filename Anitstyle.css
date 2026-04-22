@@ -1,0 +1,129 @@
+.contact-hero-content {
+    max-width: 670px;
+}
+
+.grid-2fr-1fr {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+@media (max-width:1024px) {
+   .grid-2fr-1fr {
+    
+    grid-template-columns: 1fr;
+}
+}
+
+.contact-tab-section {
+    padding: var(--space-2xl);
+    background-color: var(--bg-white);
+    border-radius: var(--radius-xl);
+    box-shadow: 0px 2px 0px #0000000D;
+}
+
+.contact-tab-card {
+    padding: var(--space-lg);
+    background-color: #3F1F710D;
+    border-radius: 16px;
+
+}
+.contact-tab-light-card h4 , 
+.contact-tab-dark-card  h4{
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.contact-tab-light {
+  background-color: #3F1F710D;
+}
+
+.contact-tab-dark {
+  background-color: #040F20 !important;
+}
+.icon{
+    height: 40px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+.icon-bg-light{
+    background-color: var(--bg-white);
+}
+.icon-bg-light-fade{
+    background-color: #FFFFFF1A;
+    /* opacity: 0.1; */
+}
+.tab-footer-btns{
+    padding-top: var(--space-xl);
+    border-top: 1px solid #C5C6CD26;
+}
+.next-step-btn{
+    padding: 16px 40px;
+}
+.detail-card{
+    background-color: #3F1F710D;
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+}
+.ls-2{
+letter-spacing: 1.2px;
+
+}
+.detail-card img{
+    height: 40px;
+    width: 40px;
+    border-radius: var(--radius-full);
+
+}
+.contact-card{
+    background-color: var(--bg-white);
+    padding: var( --space-xl);
+    border-radius: var(--radius-xl);
+}
+.contact-card_card{
+    background-color: #3F1F710D;
+    padding: 20px  22px;
+    border-radius: 16px;
+}
+.contact-img-container img{
+    width: 100%;
+    height:362px;
+    border-radius: var(--radius-xl);
+
+}
+.contact-card img{
+    border-radius: var(--radius-full);
+}
+.image-wrapper > *:not(:first-child) {
+  margin-left: -10px;
+}
+.image-wrapper img  {
+  border: 4px solid var(--bg-white);
+}
+.contact-img-container .text-wrapper{
+    position: absolute;
+    bottom: 4%;
+    left: 26%;
+    transform: translate(-50%, -50%);
+   
+    z-index: 9;
+     
+}
+.counter-wrapper{
+display: flex;
+}
+
+.counter{
+width: 48px;
+height: 6px;
+background-color: #3F1F71;
+border-radius: var(--radius-full);
+}
+.active{
+    background-color: #3F1F71;
+}
+.deactive{
+    background-color: #E6E8EA;
+}

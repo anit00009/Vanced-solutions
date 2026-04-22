@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Anitstyle.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="company-logo">
+          <a href="Vanced-solution.html">
+            <img src="Images/vanced-logo (3) 1.png" alt="Vanced Solution Logo" height="40" />
+          </a>
+        </div>
+
+        <nav class="d-none d-lg-block">
+          <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+            <li>
+              <a href="Services.html" class="nav-link-custom fs-14">Services</a>
+            </li>
+            <li>
+              <a href="Portfolio.html" class="nav-link-custom fs-14">Portfolio</a>
+            </li>
+            <li>
+              <a href="Team.html" class="nav-link-custom fs-14">Team</a>
+            </li>
+            <li>
+              <a href="Insight.html" class="nav-link-custom fs-14">Insights</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions d-flex align-items-center gap-3">
+          <button class="booking-btn d-none d-sm-block">
+            Request Consultation
+          </button>
+
+          <!-- Hamburger Menu -->
+          <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">
+        <ul class="mobile-nav-list list-unstyled">
+          <li>
+            <a href="Services.html" class="mobile-nav-link fs-16">Services</a>
+          </li>
+          <li>
+            <a href="Portfolio.html" class="mobile-nav-link fs-16">Portfolio</a>
+          </li>
+          <li><a href="Team.html" class="mobile-nav-link fs-16">Team</a></li>
+          <li>
+            <a href="Insight.html" class="mobile-nav-link fs-16">Insights</a>
+          </li>
+        </ul>
+        <div class="mt-4">
+          <button class="booking-btn w-100">Request Consultation</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section bg-soft-gray py-100">
+      <div class="container">
+        <div class="d-flex flex-column flex-lg-row gap-66 mb-64">
+          <div class="hero-content contact-hero-content">
+            <div class="d-flex flex-wrap gap-2 mb-32">
+              <span id="step-badge" class="badge-item card_one fs-12 fw-semibold">Step 01: Alignment</span>
+            </div>
+
+            <h1 class="main-heading fs-72">
+              Let's architect your
+              <span>digital future</span>
+            </h1>
+
+            <p class="fs-20 text-gray mb-0">
+              We believe in precision over guesswork. Use our conversational
+              assessment to define your project parameters, or skip ahead for
+              a direct consultation.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="d-grid grid-2fr-1fr grid-lg-cols-1 gap-5">
+          <div>
+
+
+            <div class=" contact-tab-section mb-32">
+              <div class="counter-wrapper mb-40 gap-3"><div class="counter active"></div> 
+              <div class="counter deactive"></div>
+               <div class="counter deactive"></div> 
+               <div class="counter deactive"></div></div>
+
+              <h2 id="step-title" class="fs-30 fw-bold mb-32">What is the primary objective for this
+                engagement?</h2>
+
+              <div id="cards-container" class=" d-grid grid-cols-1 grid-sm-cols-2 gap-3 mb-48">
+
+
+                <div class="contact-tab-card contact-tab-light">
+                  <div class="d-flex gap-3">
+                    <div class="icon icon-bg-light">
+                      <i class="fa-solid fs-20 fa-rocket"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="fs-16 fw-bold">New Product Launch</h4>
+                      <p class="fs-14 text-gray mb-0">MVP development and market
+                        entry strategy.</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contact-tab-card contact-tab-dark">
+                  <div class="d-flex gap-3">
+                    <div class="icon icon-bg-light-fade">
+                      <i class="fa-solid text-light fa-download"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="fs-16 text-light fw-bold">Scaling & Optimization</h4>
+                      <p class="fs-14 text-light-fade mb-0">Enhancing performance for
+                        established platforms.</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contact-tab-card contact-tab-light">
+                  <div class="d-flex gap-3">
+                    <div class="icon icon-bg-light">
+                      <i class="fas fa-universal-access"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="fs-16 fw-bold">Enterprise Modernization</h4>
+                      <p class="fs-14 text-gray mb-0">Migrating legacy systems to
+                        modern stacks.</p>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="contact-tab-card contact-tab-light">
+                  <div class="d-flex gap-3">
+                    <div class="icon icon-bg-light">
+                      <i class="fa-regular fa-lightbulb"></i>
+                    </div>
+                    <div class="">
+                      <h4 class="fs-16 fw-bold">Strategic Consulting</h4>
+                      <p class="fs-14 text-gray mb-0">Technical audits and roadmap
+                        architecture.</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="tab-footer-btns d-flex justify-content-between align-items-center">
+
+                <button class="light-btn"><i class="fa-solid fa-arrow-left-long"></i> Back</button>
+                <button class="booking-btn next-step-btn">Next Step <i
+                    class="fa-solid fa-arrow-right-long"></i></button>
+              </div>
+            </div>
+            <div class="d-grid grid-cols-1  grid-md-cols-2 gap-4">
+              <div class="detail-card">
+                <div class="d-flex align-items-center gap-3 mb-24 "><span class=""><i
+                      class="fa-solid fa-chart-column"></i></span>
+                  <p class="fw-semibold fs-12 ls-2 mb-0">Current Projection</p>
+                </div>
+                <h4 class="fs-20 fw-bold mb-2">Optimization Focus</h4>
+                <p class=" fs-14 text-gray mb-0">Based on your selection, we recommend
+                  focusing on Core Web Vitals and backend
+                  latency reduction to maximize ROI.</p>
+              </div>
+              <div class="detail-card d-flex flex-column justify-content-center gap-3 ">
+                <div class="d-flex align-items-center image-wrapper">
+                  <img  src="Images/2891449493792baecee0b3953fe7ea0838f2cad3.jpg" alt="">
+                  <img src="Images/fa6e850cc5ac2bbc1a1977c8d27bb01c22e9a3a3.jpg" alt="">
+                  <img src="Images/607055e9d016b4c63f4277cd51d423fe6d95cc85.jpg" alt="">
+                </div>
+
+                <p class="mb-0 fw-semibold">3 Solutions Architects are ready to review
+                  your case.</p>
+              </div>
+            </div>
+
+          </div>
+          <div>
+            <div class="contact-card mb-24">
+              <h3 class="fs-18 fw-semibold mb-24">Direct Channels</h3>
+
+              <div class="contact-card_card mb-3">
+                <div class="d-flex gap-3 justify-content-between align-items-center">
+                  <div class="d-flex gap-3"><i class="fa-regular fa-calendar"></i>
+                    <h5 class="fs-16 fw-bold mb-0">Schedule a Call</h5>
+                  </div>
+                  <div> <i class="fa-solid fa-chevron-right fs-12"></i></div>
+                </div>
+              </div>
+              <div class="contact-card_card ">
+                <div class="d-flex gap-3 justify-content-between align-items-center">
+                  <div class="d-flex gap-3"><i class="fa-regular fa-envelope"></i></i>
+                    <h5 class="fs-16 fw-bold mb-0">Direct Em  ail</h5>
+                  </div>
+                  <div> <i class="fa-solid fa-chevron-right fs-12"></i></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-img-container position-relative mb-24">
+              <img src="Images/e01233d7e68009c0417019f1b54a219a6746ee7c.png" alt="">
+              <div class="text-wrapper">
+              <p class="fs-12 text-light-fade mb-1 ls-2">Our Base</p>
+              <h5 class="fs-18 text-light mb-0">San Francisco HQ</h5>
+              </div>
+            </div>
+
+            <div class="contact-card contact-tab-dark">
+              <h3 class="fs-12 fw-semibold mb-24 ls-2 text-light">Powering Industry Leaders</h3>
+
+              <div class="mb-4">
+                <div class="d-flex gap-2 align-items-center"><img height="32px"
+                    src="Images/dd4884b4e89571512bc2bd79473680d6b11c85db.png" alt="">
+                  <p class="fs-12 text-light mb-0">Dr. Elena Vance</p>
+                </div>
+
+              </div>
+              <div class="">
+                <di v class="d-flex gap-2 align-items-center"><img height="32px"
+                    src="Images/e05da44fcb4ba171ab9d865a23fb442daf507b81.png" alt="">
+                  <p class="fs-12 text-light mb-0">Dr. Elena Vance</p>
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
+        <div>
+          <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="" />
+          <p class="fs-14">
+            © 2026 Vanced Solutions.<br />
+            Architectural Serenity in Code.
+          </p>
+          <div><img src="Images/Link.png" alt="" /></div>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">AI-First Dev</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Web/Mobile</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Data Consulting</a>
+            </li>
+            <li>
+              <a href="#" class="fs-14 text-gray text-decoration-none">Cloud Architecture</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Success Stories</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Methodology</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Insights</a>
+            </li>
+            <li>
+              <a href="#" class="fs-14 text-gray text-decoration-none">Careers</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Privacy Policy</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Contact Us</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Support Portal</a>
+            </li>
+            <li>
+              <a href="#" class="fs-14 text-gray text-decoration-none">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+    const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+
+    function toggleMenu() {
+      menuToggle.classList.toggle("active");
+      mobileNav.classList.toggle("active");
+      document.body.style.overflow = mobileNav.classList.contains("active")
+        ? "hidden"
+        : "";
+    }
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (mobileNav.classList.contains("active")) {
+          toggleMenu();
+        }
+      });
+    });
+
+    // Step Navigation Logic
+    const counters = document.querySelectorAll(".counter");
+    const nextBtn = document.querySelector(".next-step-btn");
+    const backBtn = document.querySelector(".light-btn");
+    const stepBadge = document.getElementById("step-badge");
+    const stepTitle = document.getElementById("step-title");
+    const cardsContainer = document.getElementById("cards-container");
+    
+    let currentStep = 0;
+
+    const stepsData = [
+      {
+        badge: "Step 01: Alignment",
+        title: "What is the primary objective for this engagement?",
+        cards: [
+          { icon: "fa-rocket", title: "New Product Launch", desc: "MVP development and market entry strategy.", dark: false },
+          { icon: "fa-download", title: "Scaling & Optimization", desc: "Enhancing performance for established platforms.", dark: true },
+          { icon: "fa-universal-access", title: "Enterprise Modernization", desc: "Migrating legacy systems to modern stacks.", dark: false },
+          { icon: "fa-regular fa-lightbulb", title: "Strategic Consulting", desc: "Technical audits and roadmap architecture.", dark: false }
+        ]
+      },
+      {
+        badge: "Step 02: Infrastructure",
+        title: "Which technologies or platforms are you targeting?",
+        cards: [
+          { icon: "fa-mobile-screen", title: "Mobile Ecosystems", desc: "Native iOS and Android application development.", dark: false },
+          { icon: "fa-cloud-arrow-up", title: "Cloud Architecture", desc: "Scalable AWS/Azure infrastructure design.", dark: false },
+          { icon: "fa-microchip", title: "AI & Intelligence", desc: "Integrating LLMs and custom machine learning.", dark: false },
+          { icon: "fa-code", title: "Web Platforms", desc: "High-performance React/Next.js architectures.", dark: false }
+        ]
+      },
+      {
+        badge: "Step 03: Delivery",
+        title: "What is the anticipated scale of this project?",
+        cards: [
+          { icon: "fa-stopwatch", title: "Rapid Prototype", desc: "Deliverable MVP within 4-6 weeks.", dark: false },
+          { icon: "fa-layer-group", title: "Full Product Cycle", desc: "End-to-end development (3-6 months).", dark: false },
+          { icon: "fa-building-shield", title: "Enterprise Solution", desc: "Complex systems with high security needs.", dark: false },
+          { icon: "fa-handshake-angle", title: "Ongoing Partnership", desc: "Continuous support and iterative growth.", dark: false }
+        ]
+      },
+      {
+        badge: "Step 04: Summary",
+        title: "Finalize your project architecture request",
+        cards: [
+          { icon: "fa-envelope-open-text", title: "Request Audit", desc: "Get a detailed technical review.", dark: false },
+          { icon: "fa-bolt", title: "Fast Track", desc: "Prioritized scheduling for urgent needs.", dark: false },
+          { icon: "fa-chart-pie", title: "Budget Analysis", desc: "Get custom cost projections.", dark: false },
+          { icon: "fa-circle-check", title: "Confirm Details", desc: "Submit selections to our team.", dark: false }
+        ]
+      }
+    ];
+
+    function updateProgress() {
+      // Update Counters
+      counters.forEach((counter, index) => {
+        if (index === currentStep) {
+          counter.classList.add("active");
+          counter.classList.remove("deactive");
+        } else {
+          counter.classList.remove("active");
+          counter.classList.add("deactive");
+        }
+      });
+
+      // Update Text Content
+      const data = stepsData[currentStep];
+      stepBadge.textContent = data.badge;
+      stepTitle.textContent = data.title;
+
+      // Render Cards
+      cardsContainer.innerHTML = data.cards.map(card => `
+        <div class="contact-tab-card ${card.dark ? 'contact-tab-dark' : 'contact-tab-light'}">
+          <div class="d-flex gap-3">
+            <div class="icon ${card.dark ? 'icon-bg-light-fade' : 'icon-bg-light'}">
+              <i class="fa-solid fs-20 ${card.icon} ${card.dark ? 'text-light' : ''}"></i>
+            </div>
+            <div>
+              <h4 class="fs-16 fw-bold ${card.dark ? 'text-light' : ''}">${card.title}</h4>
+              <p class="fs-14 ${card.dark ? 'text-light-fade' : 'text-gray'} mb-0">${card.desc}</p>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      // Re-attach card click listeners
+      attachCardListeners();
+    }
+
+    function attachCardListeners() {
+      const cards = document.querySelectorAll(".contact-tab-card");
+      cards.forEach(card => {
+        card.addEventListener("click", () => {
+          cards.forEach(c => {
+            c.classList.remove("contact-tab-dark");
+            c.classList.add("contact-tab-light");
+            c.querySelector('h4').classList.remove("text-light");
+            c.querySelector('p').classList.remove("text-light-fade");
+            c.querySelector('p').classList.add("text-gray");
+            const iconDiv = c.querySelector('.icon');
+            iconDiv.classList.remove('icon-bg-light-fade');
+            iconDiv.classList.add('icon-bg-light');
+            iconDiv.querySelector('i').classList.remove('text-light');
+          });
+
+          card.classList.remove("contact-tab-light");
+          card.classList.add("contact-tab-dark");
+          card.querySelector('h4').classList.add("text-light");
+          card.querySelector('p').classList.remove("text-gray");
+          card.querySelector('p').classList.add("text-light-fade");
+          const iconDiv = card.querySelector('.icon');
+          iconDiv.classList.remove('icon-bg-light');
+          iconDiv.classList.add('icon-bg-light-fade');
+          iconDiv.querySelector('i').classList.add('text-light');
+        });
+      });
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentStep < stepsData.length - 1) {
+        currentStep++;
+        updateProgress();
+      }
+    });
+
+    backBtn.addEventListener("click", () => {
+      if (currentStep > 0) {
+        currentStep--;
+        updateProgress();
+      }
+    });
+
+    // Initialize listeners for initial HTML state
+    attachCardListeners();
+  </script>
+</body>
+
+</html>
