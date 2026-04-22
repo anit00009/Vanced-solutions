@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Vanced Solution</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Vanced Solution</title>
     <!-- Fonts -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Anitstyle.css" />
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -16,39 +17,54 @@
         <div class="container d-flex justify-content-between align-items-center">
             <div class="company-logo">
                 <a href="Vanced-solution.html">
-                    <img src="Images/vanced-logo (3) 1.png" alt="Vanced Solution Logo" height="40">
+                    <img src="Images/vanced-logo (3) 1.png" alt="Vanced Solution Logo" height="40" />
                 </a>
             </div>
 
             <nav class="d-none d-lg-block">
                 <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
-                    <li><a href="Services.html" class="nav-link-custom fs-14">Services</a></li>
-                    <li><a href="Portfolio.html" class="nav-link-custom fs-14">Portfolio</a></li>
+                    <li>
+                        <a href="Services.html" class="nav-link-custom fs-14">Services</a>
+                    </li>
+                    <li>
+                        <a href="Portfolio.html" class="nav-link-custom fs-14">Portfolio</a>
+                    </li>
                     <li><a href="Team.html" class="nav-link-custom fs-14">Team</a></li>
-                    <li><a href="Insight.html" class="nav-link-custom fs-14">Insights</a></li>
+                    <li>
+                        <a href="Insight.html" class="nav-link-custom fs-14">Insights</a>
+                    </li>
                 </ul>
             </nav>
+            <a class="text-decoration-none" href="contact.html">
+                <div class="header-actions d-flex align-items-center gap-3">
+                    <button class="booking-btn d-none d-sm-block">
+                        Request Consultation
+                    </button>
+            </a>
 
-            <div class="header-actions d-flex align-items-center gap-3">
-                <button class="booking-btn d-none d-sm-block">Request Consultation</button>
-
-                <!-- Hamburger Menu -->
-                <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
+            <!-- Hamburger Menu -->
+            <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
         </div>
 
         <!-- Mobile Navigation Overlay -->
         <div class="mobile-nav-overlay" id="mobileNav">
             <div class="mobile-nav-content">
                 <ul class="mobile-nav-list list-unstyled">
-                    <li><a href="Services.html" class="mobile-nav-link fs-16">Services</a></li>
-                    <li><a href="Portfolio.html" class="mobile-nav-link fs-16">Portfolio</a></li>
+                    <li>
+                        <a href="Services.html" class="mobile-nav-link fs-16">Services</a>
+                    </li>
+                    <li>
+                        <a href="Portfolio.html" class="mobile-nav-link fs-16">Portfolio</a>
+                    </li>
                     <li><a href="Team.html" class="mobile-nav-link fs-16">Team</a></li>
-                    <li><a href="Insight.html" class="mobile-nav-link fs-16">Insights</a></li>
+                    <li>
+                        <a href="Insight.html" class="mobile-nav-link fs-16">Insights</a>
+                    </li>
                 </ul>
                 <div class="mt-4">
                     <button class="booking-btn w-100">Request Consultation</button>
@@ -58,70 +74,180 @@
     </header>
 
     <main>
-        <!-- Page Content Goes Here -->
-        <section class="hero-section text-center" style="padding: 100px 20px;">
-            <h1 class="main-heading fs-48">Portfolio</h1>
+        <section class="hero-section bg-soft-gray  ">
+            <div class="container">
+                <div class="d-flex flex-column flex-lg-row gap-66 align-items-end mb-64">
+                    <div class="hero-content">
+                        <div class="d-flex flex-wrap gap-2 mb-32">
+                            <span class="badge-item card_one fs-12 fw-semibold">Our works</span>
+                        </div>
+
+                        <h1 class="main-heading fs-72">
+                            The Impact Gallery.
+                            <span></span>
+                        </h1>
+
+                        <p class="fs-20 text-gray mb-0 contact-hero-content">
+                            Where architectural serenity meets technical rigor. Explore how we’ve
+                            transformed complex business challenges into elegant, scalable digital
+                            ecosystems.
+                        </p>
+
+
+
+                    </div>
+
+                    <div class="Portfolio-hero-cards ">
+                        <div class="">
+                            <div class="d-flex gap-40 mb-0">
+                                <div class="Portfolio-hero-card">
+                                    <h1 class="fs-30 gradient-text fw-bold">140+</h1>
+                                    <p class="fs-12 mb-0 text-gray">Projects Delivered</p>
+                                </div>
+                                <div class="Portfolio-hero-card">
+                                    <h1 class="fs-30 gradient-text fw-bold">98%</h1>
+                                    <p class="fs-12 mb-0 text-gray">Client Retention</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex gap-3 align-items-center mb-48">
+                    <div class="tab-badge-active">All Impact</div>
+                    <div class="tab-badge-default">AI & Data</div>
+                    <div class="tab-badge-default">Enterprise Cloud</div>
+                    <div class="tab-badge-default">Fintech</div>
+                    <div class="tab-badge-default">Healthcare</div>
+                </div>
+
+
+                <div class="d-grid grid-2fr-1fr portfolio-cards gap-24">
+                    <div class="background-box">
+
+
+                        <div>
+
+                            <div class="get-study-card fs-12 text-light mb-24">CASE STUDY: FINSTREAM</div>
+
+
+                            <h2 class="main-heading mb-3 fs-36 "> Architecting Real-Time Liquidity <br>
+                                for
+                                <span>Global Fintech</span>
+                            </h2>
+
+                            <p class="text-gray fs-18 mb-32">
+                                Redesigning a legacy core-banking system into a high-
+                                throughput microservices architecture with zero downtime.
+                            </p>
+
+                            <div class="d-flex gap-2">
+                                <div class="fs-12 fw-semibold text-light">React</div>
+                                <div class="fs-12 fw-semibold text-light">React</div>
+                                <div class="fs-12 fw-semibold text-light">React</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-card contact-tab-dark portfolio-card">
+
+
+                        <div class="d-flex justify-content-between flex-column h-100">
+                            <div>
+                                <div><img src="Images/Icon (4).png" alt=""></div>
+                                <h3 class="fs-24 fw-bold text-light mb-3">Gemini AI Integration</h3>
+                                <p class="text-light-fade">We deployed Gemini-powered predictive
+                                    analytics for a retail giant, forecasting
+                                    demand with 94% accuracy across 12
+                                    countries.</p>
+                            </div>
+
+                            <div class="portfolio-card_card">
+                                <h5 class="text-light fs-14 mb-2">Tech Stack</h5>
+                                <div class="d-flex gap-2">
+                                    <div class="tech-stack-card fs-12 fw-semibold text-light">Python</div>
+                                    <div class="tech-stack-card fs-12 fw-semibold text-light">Gemini Pro</div>
+                                    <div class="tech-stack-card fs-12 fw-semibold text-light">TensorFlow</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+
+
     </main>
 
     <footer class="footer">
-
         <div class="container">
-
-            <div class="footer-wrapper">
+            <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
                 <div>
-                    <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="">
-                    <p>© 2026 Vanced Solutions.<br>
-                        Architectural Serenity in Code.</p>
-                    <div><img src="Images/Link.png" alt=""></div>
+                    <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="" />
+                    <p class="fs-14">
+                        © 2026 Vanced Solutions.<br />
+                        Architectural Serenity in Code.
+                    </p>
+                    <div><img src="Images/Link.png" alt="" /></div>
                 </div>
                 <div>
-                    <h2 class="mb-24 fs-16">Capabilities</h2>
-                    <p class="fs-14">AI-First Dev</p>
-                    <p class="fs-14">Web/Mobile</p>
-                    <p class="fs-14">Data Consulting</p>
-                    <p class="fs-14 mb-0">Cloud Architecture</p>
+                    <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">AI-First Dev</a></li>
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Web/Mobile</a></li>
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Data Consulting</a>
+                        </li>
+                        <li><a href="#" class="fs-14 text-gray text-decoration-none">Cloud Architecture</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h2 class="mb-24 fs-16">Company</h2>
-                    <p class="fs-14">Success Stories</p>
-                    <p class="fs-14">Methodology</p>
-                    <p class="fs-14">Insights</p>
-                    <p class="fs-14 mb-0">Careers</p>
+                    <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Success Stories</a>
+                        </li>
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Methodology</a></li>
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Insights</a></li>
+                        <li><a href="#" class="fs-14 text-gray text-decoration-none">Careers</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h2 class="mb-24 fs-16">Capabilities</h2>
-                    <p class="fs-14">Privacy Policy</p>
-                    <p class="fs-14">Contact Us</p>
-                    <p class="fs-14">Support Portal</p>
-                    <p class="fs-14 mb-0">Terms</p>
+                    <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Privacy Policy</a>
+                        </li>
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Contact Us</a></li>
+                        <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Support Portal</a>
+                        </li>
+                        <li><a href="#" class="fs-14 text-gray text-decoration-none">Terms</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <div><img src="Images/Group 3473.png" alt=""></div>
+            <div><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
         </div>
-
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileNav = document.getElementById("mobileNav");
+        const mobileLinks = document.querySelectorAll(".mobile-nav-link");
 
         function toggleMenu() {
-            menuToggle.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+            menuToggle.classList.toggle("active");
+            mobileNav.classList.toggle("active");
+            document.body.style.overflow = mobileNav.classList.contains("active")
+                ? "hidden"
+                : "";
         }
 
-        menuToggle.addEventListener('click', toggleMenu);
+        menuToggle.addEventListener("click", toggleMenu);
 
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileNav.classList.contains('active')) {
+        mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+                if (mobileNav.classList.contains("active")) {
                     toggleMenu();
                 }
             });
