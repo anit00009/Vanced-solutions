@@ -346,6 +346,9 @@ h6 {
 .text-gray {
   color: var(--text-muted);
 }
+.text-blue-gray {
+  color: var(--text-blue-gray);
+}
 
 .p-40 {
   padding: 40px;
@@ -1500,7 +1503,7 @@ textarea {
   margin-bottom: 0;
 }
 
-/*************** engineering lifecycle section *******************/
+/*engineering lifecycle section */
 .desc-text-right {
   max-width: 390px;
 }
@@ -1514,7 +1517,7 @@ textarea {
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
 }
 
-/********** mastery section ***********/
+/* mastery section */
 .mastery-row {
   grid-template-columns: 1fr 2fr;
   gap: 80px;
@@ -1527,7 +1530,25 @@ textarea {
   border-radius: 16px;
 }
 
-/* portfolio page */
+/* technical ecosystem section */
+.services_2_technical-section p.description-text {
+  color: var(--text-blue-gray);
+}
+.services_2_technical-section .the-technical-card h4 {
+  color: #D4E4FA !important;
+}
+.services_2_technical-section .the-technical-card p {
+  color: var(--text-blue-gray);
+} 
+
+/* contact section */
+  .service-contact-section .form .booking-btn {
+    font-size: 18px;
+    border-radius: var(--radius-md);
+    line-height: 28px;
+  }
+
+/************* portfolio page *************/
 .Portfolio-hero-card{
  padding: 16px ;
  background-color: var(--bg-white);
@@ -1653,6 +1674,9 @@ border-radius: 4px;
   .services_2_hero .hero-content .main-heading {
     font-size: 44px;
   }
+  .service-contact-desc {
+    font-size: 16px;
+  }
 
 
   /* contact page */
@@ -1672,5 +1696,11 @@ border-radius: 4px;
   }
   .stat-item:not(:last-child) {
     border-right: none;
+  }
+
+  /* service page */
+  .service-contact-section .form .booking-btn {
+    font-size: 14px;
+    padding: 12px;
   }
 }
