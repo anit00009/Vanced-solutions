@@ -1,0 +1,111 @@
+.coustm_card{
+ background-color: var(--bg-white);
+ color: #000;
+ padding: 4px 12px;
+ border-radius: 8px;
+}   
+.coustm-btn{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grid-1fr-2fr{
+    grid-template-columns: 1fr 2fr;
+}
+.telehealth-scalability_card{
+    padding: 32px;
+    border-left: 4px solid #283D8D;
+    border-radius: 24px;
+    background-color: #fff;
+}
+.img-content-card{
+    border-radius: 24px;
+    overflow: hidden;
+}
+.p-32{
+    padding: 32px;
+}
+.plus_icon{
+    height: 48px;
+    width: 48px;
+    background-color: #3F1F7121;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.plus_icon i{
+    color: #3F1F71 !important;
+}
+.view-stoty-btn{
+    /* color: #3F1F71; */
+    
+
+}
+.read-case-btn{
+    color: #3F1F71;
+    border: 1px solid #3F1F71;
+    background-color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    width: 100%;
+}
+.item-list{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.item-list i{
+    color: #3F1F71;
+    font-size: 15px;
+}
+.grid-1fr-1fr-2fr{
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+    
+.portfolio-img-container img{
+    height: 300px;
+    width: 100%;
+    border-radius: 24px;
+    opacity: 80%;
+    background-color: #0F172A;
+    
+}
+.portfolio-img-container .text-wrapper{
+    position: absolute;
+   bottom: 20px;
+   left: 20px;
+   max-width: 420px;
+   color: #fff;
+   
+}
+.portfolio-contact-container{
+background-color: #F2F4F6;
+padding: 64px;
+border-radius: 24px;
+}
+.portfolio-content-wrapper{
+    max-width: 720px;
+    margin: 0 auto;
+}
+.portfolio-contact-container .booking-btn,
+.portfolio-contact-container .light-btn{
+    padding: 16px 24px;
+    border-radius: 24px;
+    font-size: 18px;
+    font-weight: 700;
+    height: 62px;
+
+}
+
+.portfolio-contact-container .light-btn{
+    border: 1px solid ;
+border-color: var(--primary-gradient);
+/* color: var(--primary-gradient); */
+}
