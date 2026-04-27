@@ -1,132 +1,236 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team | Vanced Solution</title>
-    <!-- Fonts -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team | Vanced Solutions</title>
+  <meta name="description"
+    content="We deliver architectural masterpieces that eliminate technical debt and accelerate roadmap velocity. From software rescue to AI-first platforms." />
+  <!-- Fonts -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 </head>
 
 <body>
-    <header class="header">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="company-logo">
-                <a href="Vanced-solution.html">
-                    <img src="Images/vanced-logo (3) 1.png" alt="Vanced Solution Logo" height="40">
-                </a>
-            </div>
-
-            <nav class="d-none d-lg-block">
-                <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
-                    <li><a href="Services.html" class="nav-link-custom fs-14">Services</a></li>
-                    <li><a href="Portfolio.html" class="nav-link-custom fs-14">Portfolio</a></li>
-                    <li><a href="Team.html" class="nav-link-custom fs-14">Team</a></li>
-                    <li><a href="Insight.html" class="nav-link-custom fs-14">Insights</a></li>
-                </ul>
-            </nav>
-
-            <div class="header-actions d-flex align-items-center gap-3">
-                <button class="booking-btn d-none d-sm-block">Request Consultation</button>
-
-                <!-- Hamburger Menu -->
-                <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-            </div>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="company-logo">
+          <a href="Vanced-solution.html">
+            <img src="Images/vanced-logo (3) 1.png" alt="Vanced Solution Logo" height="40" />
+          </a>
         </div>
 
-        <!-- Mobile Navigation Overlay -->
-        <div class="mobile-nav-overlay" id="mobileNav">
-            <div class="mobile-nav-content">
-                <ul class="mobile-nav-list list-unstyled">
-                    <li><a href="Services.html" class="mobile-nav-link fs-16">Services</a></li>
-                    <li><a href="Portfolio.html" class="mobile-nav-link fs-16">Portfolio</a></li>
-                    <li><a href="Team.html" class="mobile-nav-link fs-16">Team</a></li>
-                    <li><a href="Insight.html" class="mobile-nav-link fs-16">Insights</a></li>
-                </ul>
-                <div class="mt-4">
-                    <button class="booking-btn w-100">Request Consultation</button>
+        <nav class="d-none d-lg-block">
+          <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+            <li>
+              <a href="Services.html" class="nav-link-custom fs-14">Services</a>
+            </li>
+            <li>
+              <a href="Portfolio.html" class="nav-link-custom fs-14">Portfolio</a>
+            </li>
+            <li>
+              <a href="Team.html" class="nav-link-custom fs-14">Team</a>
+            </li>
+            <li>
+              <a href="Insight.html" class="nav-link-custom fs-14">Insights</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions d-flex align-items-center gap-3">
+          <button class="booking-btn d-none d-sm-block">
+            Request Consultation
+          </button>
+
+          <!-- Hamburger Menu -->
+          <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">
+        <ul class="mobile-nav-list list-unstyled">
+          <li>
+            <a href="Services.html" class="mobile-nav-link fs-16">Services</a>
+          </li>
+          <li>
+            <a href="Portfolio.html" class="mobile-nav-link fs-16">Portfolio</a>
+          </li>
+          <li><a href="Team.html" class="mobile-nav-link fs-16">Team</a></li>
+          <li>
+            <a href="Insight.html" class="mobile-nav-link fs-16">Insights</a>
+          </li>
+        </ul>
+        <div class="mt-4">
+          <button class="booking-btn w-100">Request Consultation</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- hero section -->
+    <section class="services_3_hero bg-soft-gray">
+      <div class="container">
+        <div class="d-grid grid-md-cols-2 align-items-center gap-66">
+          <div class="hero-content">
+            <div class="d-flex flex-wrap gap-12 mb-24">
+              <span class="badge-item card_one fs-12 fw-semibold">Legacy of Innovation</span>
+            </div>
+
+            <h1 class="main-heading fs-72">
+              Architectural Serenity in Code.
+            </h1>
+
+            <p class="fs-20 text-gray mb-0">
+              For over 17 years, we’ve refined the art of digital craftsmanship. We don't just build software; we engineer quiet confidence and lasting value.
+            </p>
+          </div>
+
+          <div class="hero-visual">
+            <div class="position-relative team-hero-img">
+              <img class="object-fit-cover"
+                src="Images/team-img.png" alt="Digital Engineering Visualization" />
+                <div class="team-hero-card p-4">
+                    <span class="fs-36 fw-bold d-inline-block mb-1">17+</span>
+                    <p class="fs-14 fw-medium text-gray mb-0">Years of continuous excellence and technical evolution.</p>
                 </div>
             </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
 
-    <main>
-        <!-- Page Content Goes Here -->
-        <section class="hero-section text-center" style="padding: 100px 20px;">
-            <h1 class="main-heading fs-48">Team</h1>
-        </section>
-    </main>
-
-    <footer class="footer">
-
+    <section class="team-section bg-gray">
         <div class="container">
-
-            <div class="footer-wrapper">
-                <div>
-                    <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="">
-                    <p>© 2026 Vanced Solutions.<br>
-                        Architectural Serenity in Code.</p>
-                    <div><img src="Images/Link.png" alt=""></div>
+            <div class="mb-64">
+                <h2 class="section-heading fs-36 mb-3">
+                    The Engineering Lifecycle
+                </h2>
+                <p class="description-text fs-16">
+                   Deep-rooted expertise meets modern vision. Our leadership team brings decades of cross-industry technical leadership.
+                </p>
+            </div>
+            <div class="team-member-row d-grid grid-sm-cols-2 grid-md-cols-3 gap-32">
+                <div class="team-member-item bg-white p-1">
+                    <img src="Images/team-member-img1.png" class="object-fit-cover w-100 rounded-4 mb-4" alt="Team Member">
+                    <div class="team-member-info">
+                        <h5 class="fs-24 fw-bold mb-1">Marcus Thorne</h5>
+                        <span class="fs-14 fw-semibold gradient-text">Founder & Chief Architect</span>
+                        <p class="fs-14 text-gray mb-0">17 years architecting enterprise ecosystems. Believes that "simple is the ultimate sophistication."</p>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="mb-24 fs-16">Capabilities</h2>
-                    <p class="fs-14">AI-First Dev</p>
-                    <p class="fs-14">Web/Mobile</p>
-                    <p class="fs-14">Data Consulting</p>
-                    <p class="fs-14 mb-0">Cloud Architecture</p>
+                <div class="team-member-item bg-white p-1">
+                    <img src="Images/team-member-img2.png" class="object-fit-cover w-100 rounded-4 mb-4" alt="Team Member">
+                    <div class="team-member-info">
+                        <h5 class="fs-24 fw-bold mb-1">Elena Vance</h5>
+                        <span class="fs-14 fw-semibold gradient-text">Director of Culture & Ops</span>
+                        <p class="fs-14 text-gray mb-0">Pioneer in remote-first team dynamics. Focused on the intersection of human empathy and digital speed.</p>
+                    </div>
                 </div>
-                <div>
-                    <h2 class="mb-24 fs-16">Company</h2>
-                    <p class="fs-14">Success Stories</p>
-                    <p class="fs-14">Methodology</p>
-                    <p class="fs-14">Insights</p>
-                    <p class="fs-14 mb-0">Careers</p>
-                </div>
-                <div>
-                    <h2 class="mb-24 fs-16">Capabilities</h2>
-                    <p class="fs-14">Privacy Policy</p>
-                    <p class="fs-14">Contact Us</p>
-                    <p class="fs-14">Support Portal</p>
-                    <p class="fs-14 mb-0">Terms</p>
+                <div class="team-member-item bg-white p-1">
+                    <img src="Images/team-member-img3.png" class="object-fit-cover w-100 rounded-4 mb-4" alt="Team Member">
+                    <div class="team-member-info">
+                        <h5 class="fs-24 fw-bold mb-1">Julian Park</h5>
+                        <span class="fs-14 fw-semibold gradient-text">VP of Engineering</span>
+                        <p class="fs-14 text-gray mb-0">Specialist in scalable cloud infrastructure. Has lead 200+ global deployments over 12 years.</p>
+                    </div>
                 </div>
             </div>
-
-            <div><img src="Images/Group 3473.png" alt=""></div>
         </div>
+    </section>
 
-    </footer>
+    <!-- living portal section -->
+     <section class="living-portal-section bg-white">
+        <div class="container">
+            <div class="mb-64">
+                <h2 class="section-heading fs-36 mb-5">
+                    The Living Portal
+                </h2>
+            </div>
+        </div>
+     </section>
+  </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
+        <div>
+          <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="" />
+          <p class="fs-14">
+            © 2026 Vanced Solutions.<br />
+            Architectural Serenity in Code.
+          </p>
+          <div><img src="Images/Link.png" alt="" /></div>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">AI-First Dev</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Web/Mobile</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Data Consulting</a>
+            </li>
+            <li>
+              <a href="#" class="fs-14 text-gray text-decoration-none">Cloud Architecture</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Success Stories</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Methodology</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Insights</a>
+            </li>
+            <li>
+              <a href="#" class="fs-14 text-gray text-decoration-none">Careers</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Privacy Policy</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Contact Us</a>
+            </li>
+            <li class="mb-3">
+              <a href="#" class="fs-14 text-gray text-decoration-none">Support Portal</a>
+            </li>
+            <li>
+              <a href="#" class="fs-14 text-gray text-decoration-none">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-        function toggleMenu() {
-            menuToggle.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        }
-
-        menuToggle.addEventListener('click', toggleMenu);
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileNav.classList.contains('active')) {
-                    toggleMenu();
-                }
-            });
-        });
-    </script>
+      <div><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
+    </div>
+  </footer>
 </body>
 
 </html>
