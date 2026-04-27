@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 
 :root {
   /* Colors */
@@ -244,7 +244,7 @@ h6 {
   font-weight: 700;
   color: #000 !important;
 }
-.body-font {
+.body-font{
   font-family: var(--font-body);
 }
 /* layout */
@@ -371,6 +371,19 @@ h6 {
   transition: color 0.3s ease;
   cursor: pointer;
   list-style: none;
+}
+.nav-link-custom.active {
+  color: var(--primary-purple);
+  position: relative;
+}
+.nav-link-custom.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-dark-blue2);
 }
 
 .header {
@@ -1168,7 +1181,7 @@ textarea {
 }
 .software-rescue-wrapper img {
   width: 100%;
-  height: 308px;
+  height: 100%;
   object-fit: cover;
 }
 .software-rescue-card {
@@ -1353,9 +1366,10 @@ textarea {
 .contact-tab-dark {
   background-color: #040f20 !important;
 }
-.icon {
+.contact-tab-card .icon {
   height: 40px;
   width: 32px;
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1429,9 +1443,6 @@ textarea {
   height: 6px;
   background-color: #3f1f71;
   border-radius: var(--radius-full);
-}
-.active {
-  background-color: #3f1f71;
 }
 .deactive {
   background-color: #e6e8ea;
@@ -1746,6 +1757,80 @@ textarea {
   padding-block: 18px;
 }
 
+/************* Service page 4 css *****************/
+.services_4_hero.services_2_hero .hero-content {
+    max-width: 730px;
+
+}
+.services_4_hero.services_2_hero::before {
+    background: linear-gradient(269deg, rgba(242, 244, 246, 0.7) 50%, rgba(242, 244, 246, 1) 50%);
+    opacity: 1;
+}
+.services_4_hero .main-description {
+    max-width: 622px;
+}
+
+.services_4_section .service-4-card {
+    box-shadow: 0 24px 48px 0 #191C1E0F;
+    border-radius: 24px;
+    padding: 40px;
+}
+.service-4-card-content {
+    background-image: url(Images/Section-4-network.png);
+}
+.service-4-card-content-last {
+    background-color: #F2F4F6;
+    border-radius: 12px;
+    border: 1px solid #C5C6CD33;
+    min-width: 192px;
+}
+.service-4-card-content-last p {
+    color: #44474C;
+}
+
+.service-4-card-content-upper p {
+    color: #44474C !important;
+}
+.services_4_enlifecycle .circle-4-number-active {
+    background: linear-gradient(#3F1F71, #283D8D);
+    border-radius: 24px;
+    height: 64px;
+    width: 64px;
+}
+.services_4_enlifecycle .circle-4-number {
+    border-radius: 24px;
+    height: 64px;
+    width: 64px;
+    background-color: #3F1F7121;
+}
+.services_4_enlifecycle .our-engineering-items::before {
+    top: 31px;
+}
+
+.domain-expertise-section-4 .section-para {
+    color: #44474C;
+}
+
+.techeco-services4-section .technical-ecosystem-item ul li::before {
+    background-color: #000;
+}
+.techeco-services4-section .technical-ecosystem-item h4{
+    color: var(--text-muted) !important;
+    letter-spacing: 1.2px;
+    border: none;
+    padding-bottom: 0px !important;
+}
+.service_4_contact-section .content-wrapper {
+  padding: 0;
+  gap: 64px;
+}
+.service_4_contact{
+    padding: 40px;
+}
+.service_4_contact-section .service_4_contact button{
+    border-radius: 12px;
+}
+
 /************* portfolio page *************/
 .Portfolio-hero-card {
   padding: 16px;
@@ -2042,10 +2127,10 @@ textarea {
   user-select: none;
 }
 .behind-code-box .kw {
-  color: #54647a;
+  color: #54647A;
 }
 .behind-code-box .fn {
-  color: #b7c8e1;
+  color: #B7C8E1;
 }
 .behind-code-box .cm {
   color: rgba(255, 255, 255, 0.5);
@@ -2100,64 +2185,67 @@ textarea {
 }
 
 /************ insights page css ******************/
-.insight_2_content_wrapper {
-  padding: 80px;
-  /* margin-top: 80px; */
-  background-color: var(--bg-dark-blue);
-  border-radius: 24px;
+.insight_2_content_wrapper{
+padding: 80px;
+/* margin-top: 80px; */
+background-color: var(--bg-dark-blue);
+border-radius: 24px;
 }
-.insight_2_card {
-  padding: 32px;
-  background-color: #ffffff0d;
-  border: 1px solid #ffffff0d;
-  border-radius: 16px;
+.insight_2_card{
+padding: 32px;
+background-color: #FFFFFF0D;
+border: 1px solid #FFFFFF0D;
+border-radius: 16px;
 }
-.gap-64 {
-  gap: 64px;
+.gap-64{
+    gap: 64px;
 }
-.text-blue-gray {
-  color: var(--text-blue-gray);
+.text-blue-gray{
+    color: var(--text-blue-gray);                                                                                                                               
 }
-.pdf-icon {
-  width: 48px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 6px;
+.pdf-icon{
+    width: 48px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 6px;
 }
-.semantic_insights_card {
-  padding: 32px;
-  background-color: #3f1f710d;
-  border-bottom: 4px solid #3f1f71;
-  border-radius: 16px;
+.semantic_insights_card{
+    padding: 32px;
+    background-color: #3F1F710D;
+    border-bottom: 4px solid #3F1F71;
+    border-radius: 16px;
 }
-.semantic_insights_code-card {
-  background-color: #fff;
-  padding: 16px;
-  font-family: "Fira Mono", monospace;
-  border-radius: 12px;
+.semantic_insights_code-card{
+    background-color: #fff;
+    padding: 16px;
+    font-family: "Fira Mono", monospace;
+    border-radius: 12px;
+    word-break: break-all;
 }
-.insight_card-icon {
-  height: 40px;
-  width: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 50%;
+.insight_card-icon{
+ height: 40px;
+ width: 40px;
+ flex-shrink: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #fff;
+ border-radius: 50%;
 }
-.insight-footer-section {
-  background-color: #f2f4f6;
-  padding: 64px;
-  border-radius: 32px;
+.insight-footer-section{
+    background-color: #F2F4F6;
+    padding: 64px;
+    border-radius: 32px;
 }
-.insight_input {
-  background-color: #fff;
+.insight_input{
+    background-color: #fff;
 }
-.insight_btn {
-  padding: 16px 32px;
+.insight_btn{
+    padding: 16px 32px;
 }
 
 /* responsive css */
@@ -2249,6 +2337,9 @@ textarea {
   .service-contact-desc {
     font-size: 16px;
   }
+  .software-rescue-card {
+    padding: 32px;
+  }
 
   /* contact page */
   .content-wrapper {
@@ -2299,6 +2390,22 @@ textarea {
   .active-box {
     bottom: 32px;
     right: 32px;
+  }
+
+  /* insight page */
+  .contact-tab-section {
+    padding: 32px;
+  }
+  .insight_2_content_wrapper {
+    padding: 32px;
+  }
+  .insight-footer-section {
+    padding: 32px;
+  }
+
+  /* services 4 contact section */
+  .service_4_contact-section .content-wrapper {
+    gap: 32px;
   }
 }
 
