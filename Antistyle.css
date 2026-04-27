@@ -1,0 +1,62 @@
+.body-font{
+    font-family: var(--font-body);
+}
+.insight_2_content_wrapper{
+padding: 80px;
+/* margin-top: 80px; */
+background-color: var(--bg-dark-blue);
+border-radius: 24px;
+}
+.insight_2_card{
+padding: 32px;
+background-color: #FFFFFF0D;
+border: 1px solid #FFFFFF0D;
+border-radius: 16px;
+}
+.gap-64{
+    gap: 64px;
+}
+.text-blue-gray{
+    color: var(--text-blue-gray);                                                                                                                               
+}
+.pdf-icon{
+    width: 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 6px;
+}
+.semantic_insights_card{
+    padding: 32px;
+    background-color: #3F1F710D;
+    border-bottom: 4px solid #3F1F71;
+    border-radius: 16px;
+}
+.semantic_insights_code-card{
+    background-color: #fff;
+    padding: 16px;
+    font-family: "Fira Mono", monospace;
+    border-radius: 12px;
+}
+.insight_card-icon{
+ height: 40px;
+ width: 40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: #fff;
+ border-radius: 50%;
+}
+.insight-footer-section{
+    background-color: #F2F4F6;
+    padding: 64px;
+    border-radius: 32px;
+}
+.insight_input{
+    background-color: #fff;
+}
+.insight_btn{
+    padding: 16px 32px;
+}
