@@ -7,91 +7,78 @@
     <title>Services | Vanced Solution</title>
     <!-- Bootstrap 5 CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <header class="header">
-      <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-        <div class="company-logo">
-          <a href="index.html">
-            <img
-              src="Images/vanced-logo (3) 1.png"
-              alt="Vanced Solution Logo"
-              height="40"
-            />
-          </a>
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="company-logo">
+                    <a href="index.html">
+                        <img src="Images/vanced-logo2.png" alt="Vanced Solution Logo" height="40" />
+                    </a>
+                </div>
+
+                <nav class="d-none d-lg-block">
+                    <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+                        <li>
+                            <a href="services.html" class="nav-link-custom fs-14">Services</a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html" class="nav-link-custom fs-14 active">Portfolio</a>
+                        </li>
+                        <li>
+                            <a href="team.html" class="nav-link-custom fs-14">Team</a>
+                        </li>
+                        <li>
+                            <a href="insight.html" class="nav-link-custom fs-14">Insights</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions d-flex align-items-center gap-3">
+                    <a href="contact.html" class="booking-btn d-none d-sm-block">
+                        Request Consultation
+                    </a>
+
+                    <!-- Hamburger Menu -->
+                    <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                </div>
+            </div>
         </div>
 
-        <nav class="d-none d-lg-block">
-          <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
-            <li>
-              <a href="services.html" class="nav-link-custom fs-14">Services</a>
-            </li>
-            <li>
-              <a href="portfolio.html" class="nav-link-custom fs-14 active"
-                >Portfolio</a
-              >
-            </li>
-            <li><a href="team.html" class="nav-link-custom fs-14">Team</a></li>
-            <li>
-              <a href="insight.html" class="nav-link-custom fs-14">Insights</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="header-actions d-flex align-items-center gap-3">
-          <a href="contact.html" class="booking-btn d-none d-sm-block">
-            Request Consultation
-          </a>
-
-          <!-- Hamburger Menu -->
-          <button
-            class="menu-toggle d-lg-none"
-            id="menuToggle"
-            aria-label="Toggle Navigation"
-          >
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNav">
+            <div class="mobile-nav-content">
+                <ul class="mobile-nav-list list-unstyled">
+                    <li>
+                        <a href="services.html" class="mobile-nav-link fs-16">Services</a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html" class="mobile-nav-link fs-16">Portfolio</a>
+                    </li>
+                    <li><a href="team.html" class="mobile-nav-link fs-16">Team</a></li>
+                    <li>
+                        <a href="insight.html" class="mobile-nav-link fs-16">Insights</a>
+                    </li>
+                </ul>
+                <div class="mt-4">
+                    <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
+                </div>
+            </div>
         </div>
-      </div>
-      </div>
-
-      <!-- Mobile Navigation Overlay -->
-      <div class="mobile-nav-overlay" id="mobileNav">
-        <div class="mobile-nav-content">
-          <ul class="mobile-nav-list list-unstyled">
-            <li>
-              <a href="services.html" class="mobile-nav-link fs-16">Services</a>
-            </li>
-            <li>
-              <a href="portfolio.html" class="mobile-nav-link fs-16"
-                >Portfolio</a
-              >
-            </li>
-            <li><a href="team.html" class="mobile-nav-link fs-16">Team</a></li>
-            <li>
-              <a href="insight.html" class="mobile-nav-link fs-16">Insights</a>
-            </li>
-          </ul>
-          <div class="mt-4">
-            <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
-          </div>
-        </div>
-      </div>
     </header>
 
     <main>
-        <section class="hero-section bg-soft-gray  ">
+        <section class="hero-section bg-soft-gray">
             <div class="container">
-                <div class="d-flex flex-column flex-lg-row gap-66 align-items-end mb-64">
+                <div class="d-flex flex-column flex-lg-row gap-66 align-items-lg-end mb-64">
                     <div class="hero-content">
                         <div class="d-flex flex-wrap gap-2 mb-32">
                             <span class="badge-item card_one fs-12 fw-semibold">Our works</span>
@@ -103,16 +90,13 @@
                         </h1>
 
                         <p class="fs-20 text-gray mb-0 contact-hero-content">
-                            Where architectural serenity meets technical rigor. Explore how we’ve
-                            transformed complex business challenges into elegant, scalable digital
-                            ecosystems.
+                            Where architectural serenity meets technical rigor. Explore how
+                            we’ve transformed complex business challenges into elegant,
+                            scalable digital ecosystems.
                         </p>
-
-
-
                     </div>
 
-                    <div class="Portfolio-hero-cards ">
+                    <div class="Portfolio-hero-cards">
                         <div class="">
                             <div class="d-flex gap-40 mb-0">
                                 <div class="Portfolio-hero-card">
@@ -123,7 +107,6 @@
                                     <h1 class="fs-30 gradient-text fw-bold">98%</h1>
                                     <p class="fs-12 mb-0 text-gray">Client Retention</p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -137,17 +120,16 @@
                     <div class="tab-badge-default">Healthcare</div>
                 </div>
 
-
                 <div class="d-grid grid-2fr-1fr portfolio-cards gap-24 mb-24">
                     <div class="background-box">
-
                         <div class="d-flex justify-content-between flex-column h-100 gap-32">
                             <div>
+                                <div class="get-study-card fs-12 text-light mb-24">
+                                    CASE STUDY: FINSTREAM
+                                </div>
 
-                                <div class="get-study-card fs-12 text-light mb-24">CASE STUDY: FINSTREAM</div>
-
-
-                                <h2 class="main-heading mb-3 fs-36 "> Architecting Real-Time Liquidity <br>
+                                <h2 class="main-heading mb-3 fs-36">
+                                    Architecting Real-Time Liquidity <br />
                                     for
                                     <span>Global Fintech</span>
                                 </h2>
@@ -165,7 +147,6 @@
                             </div>
 
                             <div class="d-flex flex-column flex-sm-row gap-3 justify-content-between">
-
                                 <div class="">
                                     <h4 class="fs-24 text-black mb-0 fw-bold">40%</h4>
                                     <p class="ls-2 text-gray mb-0">ROI INCREASE</p>
@@ -175,31 +156,39 @@
                                     <p class="ls-2 text-gray mb-0">LATENCY REDUCED</p>
                                 </div>
                                 <div>
-                                    <button class="booking-btn coustm-btn"><i
-                                            class="fa-solid fa-arrow-right"></i></button>
+                                    <button class="booking-btn coustm-btn">
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="contact-card contact-tab-dark portfolio-card">
-
-
                         <div class="d-flex justify-content-between flex-column h-100">
                             <div>
-                                <div><img src="Images/Icon (4).png" alt=""></div>
-                                <h3 class="fs-24 fw-bold text-light mb-3">Gemini AI Integration</h3>
-                                <p class="text-light-fade">We deployed Gemini-powered predictive
-                                    analytics for a retail giant, forecasting
-                                    demand with 94% accuracy across 12
-                                    countries.</p>
+                                <div><img src="Images/Icon (4).png" alt="" /></div>
+                                <h3 class="fs-24 fw-bold text-light mb-3">
+                                    Gemini AI Integration
+                                </h3>
+                                <p class="text-light-fade">
+                                    We deployed Gemini-powered predictive analytics for a retail
+                                    giant, forecasting demand with 94% accuracy across 12
+                                    countries.
+                                </p>
                             </div>
 
                             <div class="portfolio-card_card">
                                 <h5 class="text-light fs-14 mb-2">Tech Stack</h5>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <div class="tech-stack-card fs-12 fw-semibold text-light">Python</div>
-                                    <div class="tech-stack-card fs-12 fw-semibold text-light">Gemini Pro</div>
-                                    <div class="tech-stack-card fs-12 fw-semibold text-light">TensorFlow</div>
+                                    <div class="tech-stack-card fs-12 fw-semibold text-light">
+                                        Python
+                                    </div>
+                                    <div class="tech-stack-card fs-12 fw-semibold text-light">
+                                        Gemini Pro
+                                    </div>
+                                    <div class="tech-stack-card fs-12 fw-semibold text-light">
+                                        TensorFlow
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -210,14 +199,19 @@
                     <div class="telehealth-scalability_card">
                         <div class="d-flex flex-column justify-content-between h-100 gap-3">
                             <div class="mb-24">
-
                                 <div class="d-flex justify-content-between mb-24">
-                                    <div class="plus_icon"><i class="fa-solid fa-plus"
-                                            style="color: rgb(199, 199, 199);"></i></div>
+                                    <div class="plus_icon">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 20V15H0V5H5V0H15V5H20V15H15V20H5ZM2 9H7C7.16667 9 7.325 9.04167 7.475 9.125C7.625 9.20833 7.74167 9.31667 7.825 9.45L8.7 10.75L10.05 6.7C10.1167 6.5 10.2375 6.33333 10.4125 6.2C10.5875 6.06667 10.7833 6 11 6C11.1667 6 11.325 6.04167 11.475 6.125C11.625 6.20833 11.7417 6.31667 11.825 6.45L13.525 9H18V7H13V2H7V7H2V9ZM7 18H13V13H18V11H13C12.8333 11 12.675 10.9583 12.525 10.875C12.375 10.7917 12.25 10.6833 12.15 10.55L11.3 9.25L9.95 13.3C9.88333 13.5 9.75833 13.6667 9.575 13.8C9.39167 13.9333 9.19167 14 8.975 14C8.80833 14 8.65 13.9583 8.5 13.875C8.35 13.7917 8.23333 13.6833 8.15 13.55L6.45 11H2V13H7V18Z" fill="#3F1F71"/>
+                                        </svg>
+                                    </div>
                                     <p class="fs-12 ls-2 text-gray fw-bold">HEALTHCARE</p>
                                 </div>
-                                <h5 class="fs-20 fw-semibold mb-12">Telehealth Scalability</h5>
-                                <p class="fs-14 text-gray mb-0">Transitioned a manual patient intake process to a fully
+                                <h5 class="fs-20 fw-semibold mb-12">
+                                    Telehealth Scalability
+                                </h5>
+                                <p class="fs-14 text-gray mb-0">
+                                    Transitioned a manual patient intake process to a fully
                                     automated React-based portal with HIPAA-compliant data
                                     encryption.
                                 </p>
@@ -228,60 +222,75 @@
                                         <h5 class="fs-14 fw-bold mb-1">1.2M</h5>
                                         <p class="fs-10 mb-0 text-gray">PATIENTS ONBOARDED</p>
                                     </div>
-                                    <div><Button class="view-stoty-btn gradient-text border-0 fs-14 fw-bold">View Story
-                                            <i class="fa-solid fa-arrow-up-right-from-square"></i></Button></div>
+                                    <div>
+                                        <button class="view-stoty-btn gradient-text border-0 fs-14 fw-bold">
+                                            View Story
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="d-grid grid-md-cols-2 img-content-card">
-                        <div><img height="360px" width="100%" class="object-fit-cover" src="Images/image 16.png" alt="">
+                        <div>
+                            <img height="360px" width="100%" class="object-fit-cover" src="Images/image 16.png"
+                                alt="" />
                         </div>
                         <div class="p-32 bg-white">
                             <div class="d-flex flex-column justify-content-between h-100">
                                 <div class="mb-24">
-                                    <h2 class="fs-20 mb-3 fw-semibold">Cloud Native Migration for E-
-                                        Commerce</h2>
-                                    <p class="text-gray fs-14">Migrating 450+ services to Kubernetes
-                                        cluster during peak shopping season with
-                                        zero downtime.</p>
+                                    <h2 class="fs-20 mb-3 fw-semibold">
+                                        Cloud Native Migration for E- Commerce
+                                    </h2>
+                                    <p class="text-gray fs-14">
+                                        Migrating 450+ services to Kubernetes cluster during peak
+                                        shopping season with zero downtime.
+                                    </p>
 
-                                    <p class="fs-12 mb-12 item-list"><i class="fa-solid fa-circle-check"></i> 99.99%
-                                        Uptime achieved</p>
-                                    <p class="fs-12 mb-0 item-list"> <i class="fa-solid fa-circle-check"></i> 35%
-                                        reduction in cloud costs</p>
+                                    <p class="fs-12 mb-12 item-list">
+                                        <i class="fa-solid fa-circle-check"></i> 99.99% Uptime
+                                        achieved
+                                    </p>
+                                    <p class="fs-12 mb-0 item-list">
+                                        <i class="fa-solid fa-circle-check"></i> 35% reduction in
+                                        cloud costs
+                                    </p>
                                 </div>
-                                <div><button class="read-case-btn">Read Case Study</button></div>
+                                <div>
+                                    <button class="read-case-btn">Read Case Study</button>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
                 <div class="d-grid grid-1fr-1fr-2fr gap-24">
-
                     <div
                         class="contact-card contact-tab-dark d-flex flex-column justify-content-center align-items-center">
                         <h3 class="text-light fs-36 mb-0 fw-bold">350%</h3>
-                        <p class="ls-2 fs-14 text-light-fade mb-0 text-center">User Engagement
-                            Growth for Client X</p>
+                        <p class="ls-2 fs-14 fw-medium text-light-fade mb-0 text-center text-uppercase">
+                            User Engagement Growth for Client X
+                        </p>
                     </div>
-                    <div class="contact-card d-flex flex-column justify-content-center align-items-center ">
-
+                    <div class="contact-card d-flex flex-column justify-content-center align-items-center">
                         <h3 class="text-dark fs-36 mb-0 fw-bold">-$2M</h3>
-                        <p class="ls-2 fs-14 text-gray mb-0 text-center">Annual OpEx Saved
-                            Through Automation</p>
+                        <p class="ls-2 fs-14 fw-medium text-gray mb-0 text-center text-uppercase">
+                            Annual OpEx Saved Through Automation
+                        </p>
                     </div>
-                    <div class="portfolio-img-container position-relative ">
-                        <img src="Images/portfolio-img.png" alt="">
+                    <div class="portfolio-img-container position-relative">
+                        <img src="Images/portfolio-img.png" alt="" />
                         <div class="text-wrapper">
-                            <h5 class="fs-24 text-light fw-semibold mb-1">Sustainable Computing Initiative</h5>
-                            <p class="fs-14 text-light mb-0">Our green-coding practices reduced carbon footprints by 18%
-                                across all our deployed infrastructures in 2025.</p>
-
+                            <h5 class="fs-24 text-light fw-semibold mb-1">
+                                Sustainable Computing Initiative
+                            </h5>
+                            <p class="fs-14 text-light mb-0">
+                                Our green-coding practices reduced carbon footprints by 18%
+                                across all our deployed infrastructures in 2025.
+                            </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -289,14 +298,19 @@
         <section class="bg-soft-gray pt-0">
             <div class="container portfolio-contact-container">
                 <div class="portfolio-content-wrapper">
-                    <h2 class="fs-36 fw-bold text-center mb-24">Ready to build your impact?</h2>
-                    <p class=" fs-18 text-gray text-center mb-24">Join the ranks of industry leaders who chose Vanced
-                        Solutions to navigate
-                        their most ambitious technical pivots.</p>
+                    <h2 class="fs-36 fw-bold text-center mb-24">
+                        Ready to build your impact?
+                    </h2>
+                    <p class="fs-18 text-gray text-center mb-24">
+                        Join the ranks of industry leaders who chose Vanced Solutions to
+                        navigate their most ambitious technical pivots.
+                    </p>
 
-                    <div class="d-flex  align-items-center flex-wrap justify-content-center gap-3 "><button
-                            class="booking-btn">Start Your Project</button>
-                        <button class="light-btn gradient-text">Schedule a Consult</button>
+                    <div class="d-flex align-items-center flex-wrap justify-content-center gap-3">
+                        <button class="booking-btn">Start Your Project</button>
+                        <button class="light-btn gradient-text">
+                            Schedule a Consult
+                        </button>
                     </div>
                 </div>
             </div>
@@ -305,49 +319,73 @@
 
     <footer class="footer">
         <div class="container">
-          <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
-            <div>
-              <a href="index.html">
-                <img class="mb-24" src="Images/vanced-logo (3) 1.png" alt="" />
-              </a>
-              <p class="fs-14">
-                © 2026 Vanced Solutions.<br />
-                Architectural Serenity in Code.
-              </p>
-              <div><img src="Images/Link.png" alt="" /></div>
+            <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
+                <div>
+                    <a href="index.html" class="footer-logo">
+                        <img class="mb-24" src="Images/vanced-logo2.png" alt="" />
+                    </a>
+                    <p class="fs-14">
+                        © 2026 Vanced Solutions.<br />
+                        Architectural Serenity in Code.
+                    </p>
+                    <div><img src="Images/Link.png" alt="" /></div>
+                </div>
+                <div>
+                    <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">AI-First Dev</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Web/Mobile</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Data Consulting</a>
+                        </li>
+                        <li>
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Cloud Architecture</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Success Stories</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Methodology</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="insight.html" class="fs-14 text-gray text-decoration-none">Insights</a>
+                        </li>
+                        <li>
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Careers</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Privacy Policy</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="contact.html" class="fs-14 text-gray text-decoration-none">Contact Us</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Support Portal</a>
+                        </li>
+                        <li>
+                            <a href="#" class="fs-14 text-gray text-decoration-none">Terms</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div>
-              <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">AI-First Dev</a></li>
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Web/Mobile</a></li>
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Data Consulting</a></li>
-                <li><a href="#" class="fs-14 text-gray text-decoration-none">Cloud Architecture</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Success Stories</a></li>
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Methodology</a></li>
-                <li class="mb-3"><a href="insight.html" class="fs-14 text-gray text-decoration-none">Insights</a></li>
-                <li><a href="#" class="fs-14 text-gray text-decoration-none">Careers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
-              <ul class="list-unstyled mb-0">
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Privacy Policy</a></li>
-                <li class="mb-3"><a href="contact.html" class="fs-14 text-gray text-decoration-none">Contact Us</a></li>
-                <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Support Portal</a></li>
-                <li><a href="#" class="fs-14 text-gray text-decoration-none">Terms</a></li>
-              </ul>
-            </div>
-          </div>
 
-          <div><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
+            <div><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
         </div>
-      </footer>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
