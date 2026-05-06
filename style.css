@@ -250,8 +250,11 @@ h6 {
 
 /* layout */
 .four-column-grid {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.bg-primary-gradient {
+  background: var(--primary-gradient);
 }
 
 .gradient-text {
@@ -377,7 +380,7 @@ h6 {
   color: var(--primary-purple);
   position: relative;
 }
-.nav-link-custom.active::after {
+/* .nav-link-custom.active::after {
   content: "";
   position: absolute;
   bottom: -6px;
@@ -385,7 +388,7 @@ h6 {
   width: 100%;
   height: 2px;
   background-color: var(--bg-dark-blue2);
-}
+} */
 
 .header {
   padding: 20px 0;
@@ -2516,6 +2519,11 @@ textarea {
     font-size: 24px;
   }
 
+  /* portfolio page */
+  .portfolio-contact-container {
+    padding: 40px;
+  }
+
   /* services 4 contact section */
   .service_4_contact-section .content-wrapper {
     gap: 32px;
@@ -2714,7 +2722,7 @@ textarea {
   margin-top: 2px;
 }
 
-/********** About vanced page style ************/ 
+/********** About vanced page style ************/
 .about-vanced-img-wrapper img {
   border: 1px solid var(--border-soft);
   transition: transform 0.3s ease;
@@ -2724,12 +2732,20 @@ textarea {
 }
 .img-backdrop {
   background: var(--primary-gradient);
+  top: 20px;
+  left: -20px;
+  right: 20px;
+  bottom: -20px;
+  opacity: 0.4;
 }
+/* mission and vision section */
 .vanced-card-box {
   padding: 48px;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   height: 100%;
 }
 .vanced-card-box:hover {
@@ -2745,6 +2761,31 @@ textarea {
   border-radius: 50%;
   background-color: var(--bg-soft);
 }
+.vanced-card-box.bg-dark-blue2 {
+  background-color: var(--bg-dark-blue2);
+}
 .vanced-card-box.bg-dark-blue2 .icon-box {
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* values section */
+.val-card {
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
+  transition: all 0.25s;
+}
+.val-card:hover {
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 24px rgba(67, 97, 238, 0.1);
+  transform: translateY(-3px);
+}
+.val-icon img {
+  width: 60px;
+  height: 60px;
+}
+
+@media screen and (max-width: 575px) {
+  .vanced-card-box {
+    padding: 32px;
+  }
 }
