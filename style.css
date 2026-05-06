@@ -252,6 +252,10 @@ h6 {
 .four-column-grid {
   grid-template-columns: repeat(4, 1fr);
 }
+.form-control ,.form-select{
+  border-radius: 8px !important;
+  line-height: 1.5 !important;
+}
 
 .bg-primary-gradient {
   background: var(--primary-gradient);
@@ -1919,6 +1923,7 @@ textarea {
   padding: 0;
   gap: 64px;
 }
+
 .service_4_contact {
   padding: 40px;
 }
@@ -2789,3 +2794,160 @@ textarea {
     padding: 32px;
   }
 }
+
+/* --- Service Page New Sections (Restored) --- */
+
+/* Process Section */
+.process-item {
+  position: relative;
+  padding-left: 60px;
+}
+
+.process-number {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  background: var(--primary-gradient);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 18px;
+  box-shadow: 0 4px 10px rgba(63, 31, 113, 0.3);
+}
+
+.process-item::after {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 44px;
+  bottom: -24px;
+  width: 2px;
+  background: var(--border-soft);
+}
+
+.process-item:last-child::after {
+  display: none;
+}
+
+/* Benefits Section */
+.benefit-card {
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-soft);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-purple);
+  box-shadow: var(--shadow-md);
+}
+
+/* FAQ Section */
+.accordion-custom {
+  margin-top: 24px;
+}
+
+.accordion-item-custom {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md) !important;
+  margin-bottom: 16px;
+  overflow: hidden;
+  background: white;
+}
+
+.accordion-button-custom {
+  background: white;
+  padding: 20px 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  border: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.accordion-button-custom:not(.collapsed) {
+  color: var(--primary-purple);
+  background-color: rgba(63, 31, 113, 0.02);
+}
+
+.accordion-button-custom i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-button-custom:not(.collapsed) i {
+  transform: rotate(45deg);
+}
+
+.accordion-body-custom {
+  padding: 0 24px 20px;
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --- Premium Testimonial Design (Index Page) --- */
+.review-container {
+  background: white;
+  padding: 48px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  position: relative;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review-container:hover {
+  border-color: var(--primary-purple);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+.review-desc {
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-dark);
+  margin-top: 24px;
+}
+
+.user-image {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-soft);
+}
+
+.client-info h5 {
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.client-info p {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .process-item {
+    margin-bottom: 40px;
+  }
+  .review-container {
+    padding: 32px;
+  }
+  .review-desc {
+    font-size: 18px !important;
+  }
+}
+
