@@ -2845,6 +2845,7 @@ textarea {
 .benefit-card {
   transition: all 0.3s ease;
   border: 1px solid var(--border-soft);
+  background-color: var(--bg-soft);
 }
 
 .benefit-card:hover {
