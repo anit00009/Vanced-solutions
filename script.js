@@ -14,7 +14,7 @@ menuToggle.addEventListener("click", toggleMenu);
 
 mobileLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-        if (link.classList.contains("mobile-services-toggle")) {
+        if (link.classList.contains("mobile-services-toggle") || link.classList.contains("mobile-about-toggle")) {
             e.preventDefault();
             const subMenu = link.nextElementSibling;
             subMenu.classList.toggle("active");
