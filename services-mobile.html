@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Apps | Vanced Solutions</title>
+    <meta name="description" content="Native and cross-platform mobile experiences that achieve top-tier performance and user engagement." />
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="company-logo">
+            <a href="index.html">
+              <img src="Images/vanced-logo2.png" alt="Vanced Solution Logo" height="40" />
+            </a>
+          </div>
+
+          <nav class="d-none d-lg-block">
+            <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+              <li><a href="about.html" class="nav-link-custom fs-14">About</a></li>
+              <li class="nav-item-dropdown">
+                <a href="services.html" class="nav-link-custom fs-14 active">Services <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+                <div class="dropdown-menu-custom">
+                  <a href="services-strategy.html" class="dropdown-item-custom"><i class="fa-solid fa-compass"></i> Digital Strategy Consulting</a>
+                  <a href="services-analytics.html" class="dropdown-item-custom"><i class="fa-solid fa-chart-line"></i> Data Analytics</a>
+                  <a href="services-cloud.html" class="dropdown-item-custom"><i class="fa-solid fa-cloud"></i> Cloud, Chatbot & IoT Solutions</a>
+                  <a href="services-engineering.html" class="dropdown-item-custom"><i class="fa-solid fa-gears"></i> Product Engineering</a>
+                  <a href="services-ai.html" class="dropdown-item-custom"><i class="fa-solid fa-microchip"></i> Generative AI Solutions</a>
+                  <a href="services-mobile.html" class="dropdown-item-custom"><i class="fa-solid fa-mobile-screen"></i> Mobile Apps</a>
+                  <a href="services-marketing.html" class="dropdown-item-custom"><i class="fa-solid fa-bullhorn"></i> Digital Marketing Services</a>
+                  <a href="services-qa.html" class="dropdown-item-custom"><i class="fa-solid fa-vial-circle-check"></i> QA and Testing</a>
+                  <a href="services-startup.html" class="dropdown-item-custom"><i class="fa-solid fa-rocket"></i> Startup Consulting & MVP</a>
+                  <a href="services-design.html" class="dropdown-item-custom"><i class="fa-solid fa-pen-nib"></i> Bespoke Design</a>
+                </div>
+              </li>
+              <li><a href="portfolio.html" class="nav-link-custom fs-14">Portfolio</a></li>
+              <li><a href="team.html" class="nav-link-custom fs-14">Team</a></li>
+              <li><a href="insight.html" class="nav-link-custom fs-14">Insights</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions d-flex align-items-center gap-3">
+            <a href="contact.html" class="booking-btn d-none d-sm-block">Request Consultation</a>
+            <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Overlay -->
+      <div class="mobile-nav-overlay" id="mobileNav">
+        <div class="mobile-nav-content">
+          <ul class="mobile-nav-list list-unstyled">
+            <li><a href="about.html" class="mobile-nav-link fs-16">About</a></li>
+            <li>
+              <a href="services.html" class="mobile-nav-link fs-16 mobile-services-toggle active">Services <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+              <div class="mobile-sub-menu active">
+                <a href="services-strategy.html" class="mobile-sub-link">Digital Strategy Consulting</a>
+                <a href="services-analytics.html" class="mobile-sub-link">Data Analytics</a>
+                <a href="services-cloud.html" class="mobile-sub-link">Cloud, Chatbot & IoT Solutions</a>
+                <a href="services-engineering.html" class="mobile-sub-link">Product Engineering</a>
+                <a href="services-ai.html" class="mobile-sub-link">Generative AI Solutions</a>
+                <a href="services-mobile.html" class="mobile-sub-link active">Mobile Apps</a>
+                <a href="services-marketing.html" class="mobile-sub-link">Digital Marketing Services</a>
+                <a href="services-qa.html" class="mobile-sub-link">QA and Testing</a>
+                <a href="services-startup.html" class="mobile-sub-link">Startup Consulting & MVP</a>
+                <a href="services-design.html" class="mobile-sub-link">Bespoke Design</a>
+              </div>
+            </li>
+            <li><a href="portfolio.html" class="mobile-nav-link fs-16">Portfolio</a></li>
+            <li><a href="team.html" class="mobile-nav-link fs-16">Team</a></li>
+            <li><a href="insight.html" class="mobile-nav-link fs-16">Insights</a></li>
+          </ul>
+          <div class="mt-4">
+            <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="services_4_hero services_2_hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="d-flex align-items-center gap-2 mb-24 badge-item card_one py-2 px-3">
+                        <span class="fs-12 fw-semibold">Mobile Mastery</span>
+                    </div>
+                    <h1 class="main-heading">
+                        Next-Gen <span>Mobile</span> Applications
+                    </h1>
+                    <p class="fs-20 text-gray mb-40 main-description">
+                        Native-performance experiences for iOS and Android. We build high-engagement mobile products that leverage the latest device capabilities while maintaining architectural serenity.
+                    </p>
+                    <div class="d-flex flex-wrap gap-32 py-4">
+                        <div class="d-flex gap-2 align-items-center">
+                            <i class="fa-solid fa-mobile-screen-button gradient-text fs-24"></i>
+                            <div>
+                                <h1 class="fs-14 text-black fw-bold mb-0">Native Performance</h1>
+                                <p class="fs-12 fw-medium mb-0 text-gray text-uppercase ls-1">Swift / Kotlin / Flutter</p>
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 align-items-center">
+                            <i class="fa-solid fa-fingerprint gradient-text fs-24"></i>
+                            <div>
+                                <h1 class="fs-14 text-black fw-bold mb-0">Enterprise Security</h1>
+                                <p class="fs-12 fw-medium mb-0 text-gray text-uppercase ls-1">Biometric / Encrypted</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="services-section bg-soft-gray">
+            <div class="container">
+                <div class="mb-64">
+                    <h2 class="section-heading fs-36">Our Mobile Specializations</h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card bg-white p-40 rounded-4 shadow-sm border-0 h-100">
+                            <i class="fa-brands fa-apple fs-40 gradient-text mb-24"></i>
+                            <h3 class="fs-24 mb-16">iOS Development</h3>
+                            <p class="fs-16 text-gray">Deeply integrated Swift and SwiftUI apps that feel at home in the Apple ecosystem.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card bg-white p-40 rounded-4 shadow-sm border-0 h-100">
+                            <i class="fa-brands fa-android fs-40 gradient-text mb-24"></i>
+                            <h3 class="fs-24 mb-16">Android Development</h3>
+                            <p class="fs-16 text-gray">Kotlin-based applications designed for performance across the diverse Android device landscape.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card bg-white p-40 rounded-4 shadow-sm border-0 h-100">
+                            <i class="fa-solid fa-layer-group fs-40 gradient-text mb-24"></i>
+                            <h3 class="fs-24 mb-16">Cross-Platform</h3>
+                            <p class="fs-16 text-gray">High-efficiency React Native and Flutter solutions for rapid delivery across both platforms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="contact-section bg-dark-blue py-96">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-48 mb-lg-0">
+                        <h2 class="fs-48 fw-bold text-white mb-24">Launch Your Mobile Vision</h2>
+                        <p class="fs-20 text-light-fade mb-0">Book a discovery call to discuss your mobile roadmap and technical requirements.</p>
+                    </div>
+                    <div class="col-lg-6 ps-lg-5">
+                        <div class="bg-white p-48 rounded-4">
+                            <form>
+                                <div class="mb-24">
+                                    <label class="form-label fs-14 fw-bold text-uppercase">Target Platform</label>
+                                    <select class="form-select">
+                                        <option>iOS & Android (Cross-Platform)</option>
+                                        <option>iOS Native</option>
+                                        <option>Android Native</option>
+                                    </select>
+                                </div>
+                                <div class="mb-24">
+                                    <label class="form-label fs-14 fw-bold text-uppercase">Email</label>
+                                    <input type="email" class="form-control" placeholder="name@company.com">
+                                </div>
+                                <button type="submit" class="booking-btn w-100 py-3">Start Mobile Inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
+          <div>
+            <a href="index.html" class="footer-logo">
+              <img class="mb-24" src="Images/vanced-logo2.png" alt="Logo" />
+            </a>
+            <p class="fs-14 text-gray">© 2026 Vanced Solutions.<br />Architectural Serenity in Code.</p>
+            <div class="mt-4"><img src="Images/Link.png" alt="Social Links" /></div>
+          </div>
+          <div>
+            <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">AI-First Dev</a></li>
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Web/Mobile</a></li>
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Data Consulting</a></li>
+              <li><a href="#" class="fs-14 text-gray text-decoration-none">Cloud Architecture</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><a href="about.html" class="fs-14 text-gray text-decoration-none">About Us</a></li>
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Success Stories</a></li>
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Methodology</a></li>
+              <li class="mb-3"><a href="insight.html" class="fs-14 text-gray text-decoration-none">Insights</a></li>
+              <li><a href="#" class="fs-14 text-gray text-decoration-none">Careers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Privacy Policy</a></li>
+              <li class="mb-3"><a href="contact.html" class="fs-14 text-gray text-decoration-none">Contact Us</a></li>
+              <li class="mb-3"><a href="#" class="fs-14 text-gray text-decoration-none">Support Portal</a></li>
+              <li><a href="#" class="fs-14 text-gray text-decoration-none">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-5"><img src="Images/Group 3473.png" alt="Footer Banner" class="w-100" /></div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

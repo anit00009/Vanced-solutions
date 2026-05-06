@@ -13,7 +13,14 @@ function toggleMenu() {
 menuToggle.addEventListener("click", toggleMenu);
 
 mobileLinks.forEach((link) => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", (e) => {
+        if (link.classList.contains("mobile-services-toggle")) {
+            e.preventDefault();
+            const subMenu = link.nextElementSibling;
+            subMenu.classList.toggle("active");
+            link.classList.toggle("active");
+            return;
+        }
         if (mobileNav.classList.contains("active")) {
             toggleMenu();
         }
