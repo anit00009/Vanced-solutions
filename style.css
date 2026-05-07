@@ -430,7 +430,7 @@ h6 {
 .light-btn:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px -5px rgba(63, 31, 113, 0.4);
+  box-shadow: var(--shadow-lg);
 }
 .booking-btn {
   padding: 10px 24px;
@@ -3106,4 +3106,101 @@ textarea {
 .life-vanced-cta .light-btn {
   background: transparent;
   color: #fff;;
+}
+
+/************* Testimonials Page Styles *************/
+.testimonial-card {
+  border-color: var(--border-soft) !important;
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md) !important;
+  border-color: var(--primary-purple) !important;
+}
+
+.testimonial-quote-icon {
+  color: var(--primary-purple);
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.testimonial-client-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 2px solid var(--primary-purple);
+}
+
+.featured-testimonial-bg {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.featured-testimonial-circle {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+}
+
+.featured-quote-text {
+  font-family: var(--font-heading);
+}
+
+.featured-client-img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.2);
+}
+
+.max-w-900 { max-width: 900px; }
+.max-w-600 { max-width: 600px; }
+
+.logo-cloud-section {
+  padding: 70px 0;
+}
+.logo-item {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+  max-width: 140px;
+  height: 25px;
+}
+.logo-item:hover {
+  opacity: 1;
+}
+
+.light-btn1:hover {
+  color: #fff;
+}
+.light-btn2 {
+  background: transparent;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .featured-testimonial-bg {
+    padding: 100px 0;
+  }
+  .featured-quote-text {
+    font-size: 24px;
+  }
+}
+
+.transition-hover {
+  transition: all 0.3s ease;
+}
+
+.transition-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+.border-soft {
+  border-color: var(--border-soft) !important;
 }
