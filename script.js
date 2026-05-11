@@ -14,15 +14,29 @@ menuToggle.addEventListener("click", toggleMenu);
 
 mobileLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-        if (link.classList.contains("mobile-services-toggle") || link.classList.contains("mobile-about-toggle")) {
-            e.preventDefault();
-            const subMenu = link.nextElementSibling;
-            subMenu.classList.toggle("active");
-            link.classList.toggle("active");
-            return;
+        const isToggle = link.classList.contains("mobile-services-toggle") || 
+                         link.classList.contains("mobile-about-toggle") || 
+                         link.classList.contains("mobile-resources-toggle");
+
+        if (isToggle) {
+            // Only prevent default if clicking the chevron icon
+            if (e.target.tagName === "I" || e.target.closest("i")) {
+                e.preventDefault();
+                const subMenu = link.nextElementSibling;
+                if (subMenu) {
+                    subMenu.classList.toggle("active");
+                    link.classList.toggle("active");
+                }
+                return;
+            }
         }
+        
+        // If it's a regular link or clicking the text of a toggle link, allow navigation
         if (mobileNav.classList.contains("active")) {
-            toggleMenu();
+            // Keep menu open for navigation, or close it if it's a hash link
+            if (link.getAttribute("href").startsWith("#")) {
+                toggleMenu();
+            }
         }
     });
 });

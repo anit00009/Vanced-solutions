@@ -15,7 +15,7 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center gap-2">
                 <div class="company-logo">
                     <a href="index.html">
                         <img src="Images/vanced-logo2.png" alt="Vanced Solution Logo" height="40" />
@@ -72,6 +72,13 @@
                         <li>
                             <a href="insight.html" class="nav-link-custom fs-14">Insights</a>
                         </li>
+            <li class="nav-item-dropdown">
+              <a href="resources.html" class="nav-link-custom fs-14">Resources <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="blog.html" class="dropdown-item-custom"><i class="fa-solid fa-blog"></i> Blog</a>
+                <a href="faq.html" class="dropdown-item-custom"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+              </div>
+            </li>
                     </ul>
                 </nav>
 
@@ -124,6 +131,13 @@
                     <li>
                         <a href="insight.html" class="mobile-nav-link fs-16">Insights</a>
                     </li>
+            <li>
+              <a href="resources.html" class="mobile-nav-link fs-16 mobile-resources-toggle">Resources <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+              <div class="mobile-sub-menu">
+                <a href="blog.html" class="mobile-sub-link">Blog</a>
+                <a href="faq.html" class="mobile-sub-link">FAQ</a>
+              </div>
+            </li>
                 </ul>
                 <div class="mt-4">
                     <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
@@ -135,7 +149,7 @@
     <main>
         <section class="hero-section bg-soft-gray">
             <div class="container">
-                <div class="d-flex flex-column flex-lg-row gap-66 align-items-lg-end mb-64">
+                <div class="d-flex flex-column flex-lg-row gap-66 align-items-lg-end">
                     <div class="hero-content">
                         <div class="d-flex flex-wrap gap-2 mb-32">
                             <span class="badge-item card_one fs-12 fw-semibold">Our works</span>
@@ -169,15 +183,15 @@
                     </div>
                 </div>
 
-                <div class="d-flex flex-wrap gap-3 align-items-center mb-48">
+                <!-- <div class="d-flex flex-wrap gap-3 align-items-center mb-48">
                     <div class="tab-badge-active">All Impact</div>
                     <div class="tab-badge-default">AI & Data</div>
                     <div class="tab-badge-default">Enterprise Cloud</div>
                     <div class="tab-badge-default">Fintech</div>
                     <div class="tab-badge-default">Healthcare</div>
-                </div>
+                </div> -->
 
-                <div class="d-grid grid-2fr-1fr portfolio-cards gap-24 mb-24">
+                <!-- <div class="d-grid grid-2fr-1fr portfolio-cards gap-24 mb-24">
                     <div class="background-box">
                         <div class="d-flex justify-content-between flex-column h-100 gap-32">
                             <div>
@@ -250,9 +264,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="d-grid grid-1fr-2fr gap-24 mb-24">
+                <!-- <div class="d-grid grid-1fr-2fr gap-24 mb-24">
                     <div class="telehealth-scalability_card">
                         <div class="d-flex flex-column justify-content-between h-100 gap-3">
                             <div class="mb-24">
@@ -277,7 +291,7 @@
                                 </p>
                             </div>
                             <div>
-                                <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex justify-content-between align-items-center gap-2">
                                     <div>
                                         <h5 class="fs-14 fw-bold mb-1">1.2M</h5>
                                         <p class="fs-10 mb-0 text-gray">PATIENTS ONBOARDED</p>
@@ -323,9 +337,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <div class="d-grid grid-1fr-1fr-2fr gap-24">
+                <!-- <div class="d-grid grid-1fr-1fr-2fr gap-24">
                     <div
                         class="contact-card contact-tab-dark d-flex flex-column justify-content-center align-items-center">
                         <h3 class="text-light fs-36 mb-0 fw-bold">350%</h3>
@@ -351,7 +365,7 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -669,11 +683,16 @@
                     <a href="index.html" class="footer-logo">
                         <img class="mb-24" src="Images/vanced-logo2.png" alt="" />
                     </a>
-                    <p class="fs-14">
-                        © 2026 Vanced Solutions.<br />
-                        Architectural Serenity in Code.
-                    </p>
-                    <div><img src="Images/Link.png" alt="" /></div>
+                    <p class="fs-14 text-gray">
+                © 2026 Vanced Solutions.<br />
+                Architectural Serenity in Code.
+              </p>
+                    <div class="d-flex align-items-center gap-3">
+                <a href="index.html" style="line-height: 1;"><img src="Images/Link.png" alt="" /></a>
+                <a href="https://in.linkedin.com/company/vancedsolutions" target="_blank" class="gradient-text" style="line-height: 1;">
+                  <i class="fa-brands fa-linkedin fs-24"></i>
+                </a>
+              </div>
                 </div>
                 <div>
                     <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>

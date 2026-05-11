@@ -21,7 +21,7 @@
   <!-- header -->
   <header class="header">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
+        <div class="d-flex justify-content-between align-items-center gap-2">
         <div class="company-logo">
           <a href="index.html">
             <img
@@ -64,6 +64,13 @@
             <li><a href="team.html" class="nav-link-custom fs-14 active">Team</a></li>
             <li>
               <a href="insight.html" class="nav-link-custom fs-14">Insights</a>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="resources.html" class="nav-link-custom fs-14">Resources <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="blog.html" class="dropdown-item-custom"><i class="fa-solid fa-blog"></i> Blog</a>
+                <a href="faq.html" class="dropdown-item-custom"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+              </div>
             </li>
           </ul>
         </nav>
@@ -122,6 +129,13 @@
             <li>
               <a href="insight.html" class="mobile-nav-link fs-16">Insights</a>
             </li>
+            <li>
+              <a href="resources.html" class="mobile-nav-link fs-16 mobile-resources-toggle">Resources <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+              <div class="mobile-sub-menu">
+                <a href="blog.html" class="mobile-sub-link">Blog</a>
+                <a href="faq.html" class="mobile-sub-link">FAQ</a>
+              </div>
+            </li>
           </ul>
           <div class="mt-4">
             <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
@@ -145,7 +159,7 @@
             </h1>
 
             <p class="fs-20 text-gray mb-0">
-              For over 17 years, we’ve refined the art of digital
+              For over 6 years, we’ve refined the art of digital
               craftsmanship. We don't just build software; we engineer quiet
               confidence and lasting value.
             </p>
@@ -155,7 +169,7 @@
             <div class="position-relative team-hero-img">
               <img class="object-fit-cover" src="Images/team-img.png" alt="Digital Engineering Visualization" />
               <div class="team-hero-card p-4">
-                <span class="fs-36 fw-bold d-inline-block mb-1">17+</span>
+                <span class="fs-36 fw-bold d-inline-block mb-1">6+</span>
                 <p class="fs-14 fw-medium text-gray mb-0">
                   Years of continuous excellence and technical evolution.
                 </p>
@@ -167,7 +181,7 @@
     </section>
 
     <!-- team section -->
-    <section class="team-section bg-gray">
+    <!-- <section class="team-section bg-gray">
       <div class="container">
         <div class="mb-64">
           <h2 class="section-heading fs-36 mb-3">
@@ -214,10 +228,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- living portal section -->
-    <section class="living-portal-section bg-soft-gray">
+    <section class="living-portal-section bg-gray">
       <div class="container">
         <div class="mb-64">
           <h2 class="section-heading fs-36 mb-5">The Living Portal</h2>
@@ -239,7 +253,7 @@
             </div>
           </div>
           <div class="living-col2 d-grid grid-sm-cols-2 gap-3">
-            <div class="d-flex flex-column align-items-center justify-content-center p-4 reliability-col">
+            <div class="d-flex flex-column align-items-center justify-content-center p-4 reliability-col bg-white">
               <svg class="mb-3" width="33" height="32" viewBox="0 0 33 32" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -266,7 +280,7 @@
               </p>
             </div>
 
-            <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between p-32 tooling-col">
+            <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between p-32 tooling-col bg-white">
               <div class="tooling-detail-col">
                 <h2 class="fs-20 fw-bold mb-2">Our Tooling</h2>
                 <p class="fs-14 text-gray mb-0">
@@ -287,7 +301,7 @@
     </section>
 
     <!-- behind screens section -->
-    <section class="behind-screen-section">
+    <section class="behind-screen-section bg-light">
       <div class="container">
         <div class="d-grid grid-lg-cols-2 behind-screen-wrapper">
           <div class="behind-screen-col p-sm-5">
@@ -362,7 +376,7 @@
           </p>
         </div>
         <div class="global-map position-relative">
-          <img src="Images/map-img.png" alt="Map Image" class="map-img">
+          <img src="Images/global-map-img.webp" alt="Map Image" class="map-img">
           <div class="location-pill london-pill rounded-pill bg-white d-flex align-items-center gap-12 p-3 position-absolute">
             <div class="locatiion-dot"></div>
             <p class="fs-12 fw-bold mb-0">London Hub</p>
@@ -393,11 +407,16 @@
               <a href="index.html" class="footer-logo">
                 <img class="mb-24" src="Images/vanced-logo2.png" alt="" />
               </a>
-              <p class="fs-14">
+              <p class="fs-14 text-gray">
                 © 2026 Vanced Solutions.<br />
                 Architectural Serenity in Code.
               </p>
-              <div><img src="Images/Link.png" alt="" /></div>
+              <div class="d-flex align-items-center gap-3">
+                <a href="index.html" style="line-height: 1;"><img src="Images/Link.png" alt="" /></a>
+                <a href="https://in.linkedin.com/company/vancedsolutions" target="_blank" class="gradient-text" style="line-height: 1;">
+                  <i class="fa-brands fa-linkedin fs-24"></i>
+                </a>
+              </div>
             </div>
                         <div>
               <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>

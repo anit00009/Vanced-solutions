@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ | Vanced Solutions</title>
+  <meta name="description"
+    content="Find answers to frequently asked questions about Vanced Solutions, our process, technology stack, and how we help businesses grow." />
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center gap-2">
+        <div class="company-logo">
+          <a href="index.html">
+            <img src="Images/vanced-logo2.png" alt="Vanced Solution Logo" height="40" />
+          </a>
+        </div>
+
+        <nav class="d-none d-lg-block">
+          <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+            <li class="nav-item-dropdown">
+              <a href="about.html" class="nav-link-custom fs-14">About Us <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="life-vanced.html" class="dropdown-item-custom"><i class="fa-solid fa-users"></i> Life@vanced</a>
+                <a href="testimonials.html" class="dropdown-item-custom"><i class="fa-solid fa-star"></i> Testimonials</a>
+              </div>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="services.html" class="nav-link-custom fs-14">Services <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="services-strategy.html" class="dropdown-item-custom"><i class="fa-solid fa-compass"></i> Digital Strategy Consulting</a>
+                <a href="services-analytics.html" class="dropdown-item-custom"><i class="fa-solid fa-chart-line"></i> Data Analytics</a>
+                <a href="services-cloud.html" class="dropdown-item-custom"><i class="fa-solid fa-cloud"></i> Cloud, Chatbot & IoT Solutions</a>
+                <a href="services-engineering.html" class="dropdown-item-custom"><i class="fa-solid fa-gears"></i> Product Engineering</a>
+                <a href="services-ai.html" class="dropdown-item-custom"><i class="fa-solid fa-microchip"></i> Generative AI Solutions</a>
+                <a href="services-mobile.html" class="dropdown-item-custom"><i class="fa-solid fa-mobile-screen"></i> Mobile Apps</a>
+                <a href="services-marketing.html" class="dropdown-item-custom"><i class="fa-solid fa-bullhorn"></i> Digital Marketing Services</a>
+                <a href="services-qa.html" class="dropdown-item-custom"><i class="fa-solid fa-vial-circle-check"></i> QA and Testing</a>
+                <a href="services-startup.html" class="dropdown-item-custom"><i class="fa-solid fa-rocket"></i> Startup Consulting & MVP</a>
+                <a href="services-design.html" class="dropdown-item-custom"><i class="fa-solid fa-pen-nib"></i> Bespoke Design</a>
+              </div>
+            </li>
+            <li><a href="portfolio.html" class="nav-link-custom fs-14">Portfolio</a></li>
+            <li><a href="team.html" class="nav-link-custom fs-14">Team</a></li>
+            <li><a href="insight.html" class="nav-link-custom fs-14">Insights</a></li>
+            <li class="nav-item-dropdown">
+              <a href="resources.html" class="nav-link-custom fs-14 active">Resources <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="blog.html" class="dropdown-item-custom"><i class="fa-solid fa-blog"></i> Blog</a>
+                <a href="faq.html" class="dropdown-item-custom"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions d-flex align-items-center gap-3">
+          <a href="contact.html" class="booking-btn d-none d-sm-block">Request Consultation</a>
+          <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">
+        <ul class="mobile-nav-list list-unstyled">
+          <li>
+            <a href="about.html" class="mobile-nav-link fs-16 mobile-about-toggle">About Us <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+            <div class="mobile-sub-menu">
+              <a href="life-vanced.html" class="mobile-sub-link">Life@vanced</a>
+              <a href="testimonials.html" class="mobile-sub-link">Testimonials</a>
+            </div>
+          </li>
+          <li>
+            <a href="services.html" class="mobile-nav-link fs-16 mobile-services-toggle">Services <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+            <div class="mobile-sub-menu">
+              <a href="services-strategy.html" class="mobile-sub-link">Digital Strategy Consulting</a>
+              <a href="services-analytics.html" class="mobile-sub-link">Data Analytics</a>
+              <a href="services-cloud.html" class="mobile-sub-link">Cloud, Chatbot & IoT Solutions</a>
+              <a href="services-engineering.html" class="mobile-sub-link">Product Engineering</a>
+              <a href="services-ai.html" class="mobile-sub-link">Generative AI Solutions</a>
+              <a href="services-mobile.html" class="mobile-sub-link">Mobile Apps</a>
+              <a href="services-marketing.html" class="mobile-sub-link">Digital Marketing Services</a>
+              <a href="services-qa.html" class="mobile-sub-link">QA and Testing</a>
+              <a href="services-startup.html" class="mobile-sub-link">Startup Consulting & MVP</a>
+              <a href="services-design.html" class="mobile-sub-link">Bespoke Design</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="mobile-nav-link fs-16">Portfolio</a></li>
+          <li><a href="team.html" class="mobile-nav-link fs-16">Team</a></li>
+          <li><a href="insight.html" class="mobile-nav-link fs-16">Insights</a></li>
+            <li>
+            <a href="resources.html" class="mobile-nav-link fs-16 mobile-resources-toggle active">Resources <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+            <div class="mobile-sub-menu">
+              <a href="blog.html" class="mobile-sub-link">Blog</a>
+              <a href="faq.html" class="mobile-sub-link active">FAQ</a>
+            </div>
+          </li>
+        </ul>
+        <div class="mt-4">
+          <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-soft-gray">
+      <div class="container text-center">
+        <div class="d-inline-flex align-items-center gap-2 mb-24 badge-item card_one py-1 px-3 mx-auto">
+          <span class="fs-12 fw-semibold text-uppercase ls-1">How Can We Help?</span>
+        </div>
+        <h1 class="main-heading fs-72 mb-32">Frequently Asked <span>Questions</span></h1>
+        <p class="fs-20 text-gray mb-0 mx-auto" style="max-width: 800px">
+          Find answers to common questions about our partnership models, technology stacks, and development process.
+        </p>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-light bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion faqs-accordion" id="faqPageAccordion">
+              <!-- General Questions -->
+              <div class="mb-48">
+                <h3 class="fs-24 mb-32">General Questions</h3>
+                <div class="accordion-item mb-4">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                      What is Vanced Solutions' core expertise?
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqPageAccordion">
+                    <div class="accordion-body">
+                      <p class="fs-14 mb-0">We specialize in building scalable digital products, including modern web applications, mobile apps, and cloud-native solutions. Our expertise spans across AI integration, data analytics, and enterprise software development.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-4">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                      How long does a typical project take?
+                    </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqPageAccordion">
+                    <div class="accordion-body">
+                      <p class="fs-14 mb-0">Project timelines vary based on complexity. A lean MVP can take 8-12 weeks, while more complex enterprise platforms might take 6 months or longer. We provide a detailed roadmap after our initial discovery phase.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Process & Collaboration -->
+              <div class="mb-48">
+                <h3 class="fs-24 mb-32">Process & Collaboration</h3>
+                <div class="accordion-item mb-4">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                      What is your development process?
+                    </button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqPageAccordion">
+                    <div class="accordion-body">
+                      <p class="fs-14 mb-0">We follow a structured 4-step process: 1. Discovery & Planning, 2. Design & Architecture, 3. Development & Testing, and 4. Launch & Support. This ensures transparency and quality at every stage.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item mb-4">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                      Will I have a dedicated project manager?
+                    </button>
+                  </h2>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqPageAccordion">
+                    <div class="accordion-body">
+                      <p class="fs-14 mb-0">Yes, every project is assigned a dedicated Account Manager or Project Lead who serves as your main point of contact and ensures the project stays on track.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Technology & Security -->
+              <div>
+                <h3 class="fs-24 mb-32">Technology & Security</h3>
+                <div class="accordion-item mb-4">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                      Which technology stack do you use?
+                    </button>
+                  </h2>
+                  <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqPageAccordion">
+                    <div class="accordion-body">
+                      <p class="fs-14 mb-0">We use modern, battle-tested technologies like React, Next.js, Node.js, Python, and Flutter. We select the best tools based on your project's specific performance and scalability needs.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed p-0 bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                      How do you handle data security?
+                    </button>
+                  </h2>
+                  <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqPageAccordion">
+                    <div class="accordion-body">
+                      <p class="fs-14 mb-0">Security is integrated from day one. We follow industry best practices for data encryption, secure authentication, and regular security audits to protect your sensitive information.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <img class="mb-24" src="Images/vanced-logo2.png" alt="" />
+          </a>
+          <p class="fs-14 text-gray">
+            © 2026 Vanced Solutions.<br />
+            Architectural Serenity in Code.
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <a href="index.html" style="line-height: 1;"><img src="Images/Link.png" alt="" /></a>
+            <a href="https://in.linkedin.com/company/vancedsolutions" target="_blank" class="gradient-text" style="line-height: 1;">
+              <i class="fa-brands fa-linkedin fs-24"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="services-ai.html" class="fs-14 text-gray text-decoration-none">Generative AI</a></li>
+            <li class="mb-3"><a href="services-mobile.html" class="fs-14 text-gray text-decoration-none">Mobile Apps</a></li>
+            <li class="mb-3"><a href="services-analytics.html" class="fs-14 text-gray text-decoration-none">Data Analytics</a></li>
+            <li><a href="services-cloud.html" class="fs-14 text-gray text-decoration-none">Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="about.html" class="fs-14 text-gray text-decoration-none">About Us</a></li>
+            <li class="mb-3"><a href="portfolio.html" class="fs-14 text-gray text-decoration-none">Portfolio</a></li>
+            <li class="mb-3"><a href="testimonials.html" class="fs-14 text-gray text-decoration-none">Testimonials</a></li>
+            <li class="mb-3"><a href="insight.html" class="fs-14 text-gray text-decoration-none">Insights</a></li>
+            <li><a href="life-vanced.html" class="fs-14 text-gray text-decoration-none">Life@Vanced</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="privacy-policy.html" class="fs-14 text-gray text-decoration-none">Privacy Policy</a></li>
+            <li class="mb-3"><a href="contact.html" class="fs-14 text-gray text-decoration-none">Contact Us</a></li>
+            <li><a href="terms-of-use.html" class="fs-14 text-gray text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-5"><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

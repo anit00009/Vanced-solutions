@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Vanced Solutions</title>
+  <meta name="description"
+    content="Explore our resource hub for technical insights, frequently asked questions, and success stories that empower your digital journey." />
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="Images/favicon.png">
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center gap-2">
+        <div class="company-logo">
+          <a href="index.html">
+            <img src="Images/vanced-logo2.png" alt="Vanced Solution Logo" height="40" />
+          </a>
+        </div>
+
+        <nav class="d-none d-lg-block">
+          <ul class="d-flex mb-0 p-0 gap-40 list-unstyled align-items-center">
+            <li class="nav-item-dropdown">
+              <a href="about.html" class="nav-link-custom fs-14">About Us <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="life-vanced.html" class="dropdown-item-custom"><i class="fa-solid fa-users"></i> Life@vanced</a>
+                <a href="testimonials.html" class="dropdown-item-custom"><i class="fa-solid fa-star"></i> Testimonials</a>
+              </div>
+            </li>
+            <li class="nav-item-dropdown">
+              <a href="services.html" class="nav-link-custom fs-14">Services <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="services-strategy.html" class="dropdown-item-custom"><i class="fa-solid fa-compass"></i> Digital Strategy Consulting</a>
+                <a href="services-analytics.html" class="dropdown-item-custom"><i class="fa-solid fa-chart-line"></i> Data Analytics</a>
+                <a href="services-cloud.html" class="dropdown-item-custom"><i class="fa-solid fa-cloud"></i> Cloud, Chatbot & IoT Solutions</a>
+                <a href="services-engineering.html" class="dropdown-item-custom"><i class="fa-solid fa-gears"></i> Product Engineering</a>
+                <a href="services-ai.html" class="dropdown-item-custom"><i class="fa-solid fa-microchip"></i> Generative AI Solutions</a>
+                <a href="services-mobile.html" class="dropdown-item-custom"><i class="fa-solid fa-mobile-screen"></i> Mobile Apps</a>
+                <a href="services-marketing.html" class="dropdown-item-custom"><i class="fa-solid fa-bullhorn"></i> Digital Marketing Services</a>
+                <a href="services-qa.html" class="dropdown-item-custom"><i class="fa-solid fa-vial-circle-check"></i> QA and Testing</a>
+                <a href="services-startup.html" class="dropdown-item-custom"><i class="fa-solid fa-rocket"></i> Startup Consulting & MVP</a>
+                <a href="services-design.html" class="dropdown-item-custom"><i class="fa-solid fa-pen-nib"></i> Bespoke Design</a>
+              </div>
+            </li>
+            <li><a href="portfolio.html" class="nav-link-custom fs-14">Portfolio</a></li>
+            <li><a href="team.html" class="nav-link-custom fs-14">Team</a></li>
+            <li><a href="insight.html" class="nav-link-custom fs-14">Insights</a></li>
+            <li class="nav-item-dropdown">
+              <a href="resources.html" class="nav-link-custom fs-14 active">Resources <i class="fa-solid fa-chevron-down fs-10 ms-1"></i></a>
+              <div class="dropdown-menu-custom">
+                <a href="blog.html" class="dropdown-item-custom"><i class="fa-solid fa-blog"></i> Blog</a>
+                <a href="faq.html" class="dropdown-item-custom"><i class="fa-solid fa-circle-question"></i> FAQ</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-actions d-flex align-items-center gap-3">
+          <a href="contact.html" class="booking-btn d-none d-sm-block">Request Consultation</a>
+          <button class="menu-toggle d-lg-none" id="menuToggle" aria-label="Toggle Navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNav">
+      <div class="mobile-nav-content">
+        <ul class="mobile-nav-list list-unstyled">
+          <li>
+            <a href="about.html" class="mobile-nav-link fs-16 mobile-about-toggle">About Us <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+            <div class="mobile-sub-menu">
+              <a href="life-vanced.html" class="mobile-sub-link">Life@vanced</a>
+              <a href="testimonials.html" class="mobile-sub-link">Testimonials</a>
+            </div>
+          </li>
+          <li>
+            <a href="services.html" class="mobile-nav-link fs-16 mobile-services-toggle">Services <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+            <div class="mobile-sub-menu">
+              <a href="services-strategy.html" class="mobile-sub-link">Digital Strategy Consulting</a>
+              <a href="services-analytics.html" class="mobile-sub-link">Data Analytics</a>
+              <a href="services-cloud.html" class="mobile-sub-link">Cloud, Chatbot & IoT Solutions</a>
+              <a href="services-engineering.html" class="mobile-sub-link">Product Engineering</a>
+              <a href="services-ai.html" class="mobile-sub-link">Generative AI Solutions</a>
+              <a href="services-mobile.html" class="mobile-sub-link">Mobile Apps</a>
+              <a href="services-marketing.html" class="mobile-sub-link">Digital Marketing Services</a>
+              <a href="services-qa.html" class="mobile-sub-link">QA and Testing</a>
+              <a href="services-startup.html" class="mobile-sub-link">Startup Consulting & MVP</a>
+              <a href="services-design.html" class="mobile-sub-link">Bespoke Design</a>
+            </div>
+          </li>
+          <li><a href="portfolio.html" class="mobile-nav-link fs-16">Portfolio</a></li>
+          <li><a href="team.html" class="mobile-nav-link fs-16">Team</a></li>
+          <li><a href="insight.html" class="mobile-nav-link fs-16">Insights</a></li>
+            <li>
+            <a href="resources.html" class="mobile-nav-link fs-16 mobile-resources-toggle active">Resources <i class="fa-solid fa-chevron-down fs-12 ms-1"></i></a>
+            <div class="mobile-sub-menu active">
+              <a href="blog.html" class="mobile-sub-link">Blog</a>
+              <a href="faq.html" class="mobile-sub-link">FAQ</a>
+            </div>
+          </li>
+        </ul>
+        <div class="mt-4">
+          <a href="contact.html" class="booking-btn w-100">Request Consultation</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-soft-gray">
+      <div class="container text-center">
+        <div class="d-inline-flex align-items-center gap-2 mb-24 badge-item card_one py-1 px-3 mx-auto">
+          <span class="fs-12 fw-semibold text-uppercase ls-1">Resource Center</span>
+        </div>
+        <h1 class="main-heading fs-72 mb-32">Our <span>Resources</span></h1>
+        <p class="fs-20 text-gray mb-0 mx-auto" style="max-width: 800px">
+          Everything you need to stay ahead in the digital landscape. From deep-dives into engineering to answering your project-related queries.
+        </p>
+      </div>
+    </section>
+
+    <!-- Resources Grid Section -->
+    <section class="bg-light bg-white">
+      <div class="container">
+        <div class="row g-4 mb-64">
+          <!-- Blog Resource -->
+          <div class="col-md-6">
+            <div class="p-40 rounded-5 h-100 d-flex flex-column justify-content-between resources-card">
+              <div>
+                <i class="fa-solid fa-blog fs-48 gradient-text mb-32"></i>
+                <h3 class="fs-24 fw-bold mb-3">Engineering Blog</h3>
+                <p class="fs-16 text-gray mb-32">Explore technical articles, industry trends, and company updates from our team of experts.</p>
+              </div>
+              <a href="blog.html" class="booking-btn w-fit-content px-4">Explore Blog</a>
+            </div>
+          </div>
+
+          <!-- FAQ Resource -->
+          <div class="col-md-6">
+            <div class="p-40 rounded-5 h-100 d-flex flex-column justify-content-between resources-card">
+              <div>
+                <i class="fa-solid fa-circle-question fs-48 gradient-text mb-32"></i>
+                <h3 class="fs-24 fw-bold mb-3">Frequently Asked Questions</h3>
+                <p class="fs-16 text-gray mb-32">Got questions about our process, technology stack, or partnership models? Find the answers here.</p>
+              </div>
+              <a href="faq.html" class="booking-btn w-fit-content px-4">View FAQs</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Studies (Linking to Portfolio) -->
+        <div class="p-5 rounded-5 h-100 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-4 case-study-wrapper">
+          <div style="max-width: 600px;">
+            <h3 class="fs-36 fw-bold text-white mb-16">Success Stories</h3>
+            <p class="fs-18 text-light-fade mb-0">See how we've helped businesses across various industries achieve their digital goals through innovative solutions.</p>
+          </div>
+          <a href="portfolio.html" class="light-btn text-decoration-none">View Portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-wrapper d-grid grid-md-cols-4 grid-sm-cols-2">
+        <div>
+          <a href="index.html" class="footer-logo">
+            <img class="mb-24" src="Images/vanced-logo2.png" alt="" />
+          </a>
+          <p class="fs-14 text-gray">
+            © 2026 Vanced Solutions.<br />
+            Architectural Serenity in Code.
+          </p>
+          <div class="d-flex align-items-center gap-3">
+            <a href="index.html" style="line-height: 1;"><img src="Images/Link.png" alt="" /></a>
+            <a href="https://in.linkedin.com/company/vancedsolutions" target="_blank" class="gradient-text" style="line-height: 1;">
+              <i class="fa-brands fa-linkedin fs-24"></i>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="services-ai.html" class="fs-14 text-gray text-decoration-none">Generative AI</a></li>
+            <li class="mb-3"><a href="services-mobile.html" class="fs-14 text-gray text-decoration-none">Mobile Apps</a></li>
+            <li class="mb-3"><a href="services-analytics.html" class="fs-14 text-gray text-decoration-none">Data Analytics</a></li>
+            <li><a href="services-cloud.html" class="fs-14 text-gray text-decoration-none">Cloud Solutions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Company</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="about.html" class="fs-14 text-gray text-decoration-none">About Us</a></li>
+            <li class="mb-3"><a href="portfolio.html" class="fs-14 text-gray text-decoration-none">Portfolio</a></li>
+            <li class="mb-3"><a href="testimonials.html" class="fs-14 text-gray text-decoration-none">Testimonials</a></li>
+            <li class="mb-3"><a href="insight.html" class="fs-14 text-gray text-decoration-none">Insights</a></li>
+            <li><a href="life-vanced.html" class="fs-14 text-gray text-decoration-none">Life@Vanced</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Support</h5>
+          <ul class="list-unstyled mb-0">
+            <li class="mb-3"><a href="privacy-policy.html" class="fs-14 text-gray text-decoration-none">Privacy Policy</a></li>
+            <li class="mb-3"><a href="contact.html" class="fs-14 text-gray text-decoration-none">Contact Us</a></li>
+            <li><a href="terms-of-use.html" class="fs-14 text-gray text-decoration-none">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-5"><img src="Images/Group 3473.png" alt="" class="w-100" /></div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
