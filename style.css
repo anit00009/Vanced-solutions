@@ -1184,12 +1184,19 @@ h6 {
   border-radius: 12px;
   height: 48px;
   width: 48px;
+  flex-shrink: 0;
+}
+.word-break-all {
+  word-break: break-all;
 }
 
 .form-wrapper {
   border-radius: var(--space-xl);
   background-color: var(--bg-soft);
   padding: 80px;
+}
+.home-form-wrapper {
+  padding: 40px;
 }
 
 .form {
@@ -1291,6 +1298,9 @@ textarea {
 }
 .software-rescue-card {
   padding: var(--space-2xl);
+}
+.software-rescue-card .light-btn:hover {
+  color: #fff;
 }
 
 .service-domain-card {
@@ -2565,6 +2575,10 @@ textarea {
   .review-container .review-desc {
     font-size: 18px !important;
   }
+  .home-form-wrapper {
+    padding: 24px;
+    border-radius: var(--radius-lg);
+  }
 
   /* service page */
   .services_2_hero .hero-content .main-heading {
@@ -2752,18 +2766,18 @@ textarea {
   z-index: -1;
 }
 .expertise-card-custom {
-  background: white;
+  background-color: var(--bg-white);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-lg);
   padding: 48px 32px;
-  border-radius: 20px;
+  transition: all 0.25s;
   text-align: center;
-  transition: all 0.3s ease;
   height: 100%;
-  border: 1px solid var(--border-soft);
 }
 .expertise-card-custom:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
+  border-color: var(--primary-blue);
+  box-shadow: 0 4px 24px rgba(67, 97, 238, 0.1);
+  transform: translateY(-3px);
 }
 .expertise-card-custom i {
   font-size: 40px;
@@ -2895,6 +2909,7 @@ textarea {
 
 /* values section */
 .val-card {
+  background-color: var(--bg-white);
   border: 1px solid #e5e7eb;
   border-radius: var(--radius-lg);
   transition: all 0.25s;
@@ -2992,6 +3007,9 @@ textarea {
   }
   .contact-section h2.fs-48 {
     font-size: 30px;
+  }
+  .contact-section p.fs-20 {
+    font-size: 16px;
   }
 }
 
