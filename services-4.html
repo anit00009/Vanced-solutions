@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-        Vanced Solution | Engineering High-Performance Digital Products
+        Vanced Solutions | Engineering High-Performance Digital Products
     </title>
     <meta name="description"
         content="We deliver architectural masterpieces that eliminate technical debt and accelerate roadmap velocity. From software rescue to AI-first platforms." />
@@ -29,7 +29,6 @@
             <img
               src="Images/vanced-logo2.png"
               alt="Vanced Solution Logo"
-              height="40"
             />
           </a>
         </div>
@@ -573,32 +572,60 @@
                         </div>
                     </div>
                     <div class="contact-col service_4_contact p-40 form-wrapper">
-                        <form class="form">
-                            <div class="form-row">
-                                <div class="field-group">
-                                    <label>FULL NAME</label>
-                                    <input type="text" placeholder="John Doe" />
-                                </div>
-
-                                <div class="field-group">
-                                    <label>Work Email</label>
-                                    <input type="text" placeholder="Acme Inc." />
-                                </div>
+                        <form
+                        class="form"
+                        id="contact-form"
+                        method="post"
+                        action="contact.php"
+                        >
+                        <div class="form-row">
+                            <div class="field-group">
+                            <label>FULL NAME</label>
+                            <input
+                                id="form_name"
+                                name="name"
+                                type="text"
+                                placeholder="John Doe"
+                                required
+                            />
                             </div>
 
                             <div class="field-group">
-                                <label>Project Category</label>
-                                <input type="text" placeholder="https://" />
+                            <label>EMAIL</label>
+                            <input
+                                id="form_email"
+                                name="email"
+                                type="email"
+                                placeholder="example@email.com"
+                                required
+                            />
                             </div>
+                        </div>
 
+                        <div class="field-group">
+                            <label>SUBJECT</label>
+                            <input
+                            id="form_subject"
+                            name="subject"
+                            type="text"
+                            placeholder="Subject"
+                            required
+                            />
+                        </div>
 
+                        <div class="field-group">
+                            <label>MESSAGE</label>
+                            <textarea
+                            id="form_message"
+                            name="message"
+                            placeholder="Brief project description..."
+                            required
+                            ></textarea>
+                        </div>
 
-                            <div class="field-group">
-                                <label>Project Scope</label>
-                                <textarea placeholder="Brief project description..."></textarea>
-                            </div>
-
-                            <button class="booking-btn  w-100">Submit Engineering Inquiry</button>
+                        <button type="submit" class="booking-btn">
+                            Request Consultation
+                        </button>
                         </form>
                     </div>
                 </div>
@@ -694,10 +721,10 @@
                         <div>
               <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
               <ul class="list-unstyled mb-0">
-                <li class="mb-3"><a href="services-ai.html" class="fs-14 text-gray text-decoration-none">Generative AI</a></li>
-                <li class="mb-3"><a href="services-mobile.html" class="fs-14 text-gray text-decoration-none">Mobile Apps</a></li>
-                <li class="mb-3"><a href="services-analytics.html" class="fs-14 text-gray text-decoration-none">Data Analytics</a></li>
-                <li><a href="services-cloud.html" class="fs-14 text-gray text-decoration-none">Cloud Solutions</a></li>
+                <li class="mb-3"><a href="/services/generative-ai-solutions.html" class="fs-14 text-gray text-decoration-none">Generative AI</a></li>
+                <li class="mb-3"><a href="/services/mobile-app-development.html" class="fs-14 text-gray text-decoration-none">Mobile Apps</a></li>
+                <li class="mb-3"><a href="/services/data-analytics.html" class="fs-14 text-gray text-decoration-none">Data Analytics</a></li>
+                <li><a href="/services/cloud-chatbot-iot-solutions.html" class="fs-14 text-gray text-decoration-none">Cloud Solutions</a></li>
               </ul>
             </div>
             <div>

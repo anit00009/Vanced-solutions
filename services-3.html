@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -27,7 +27,6 @@
             <img
               src="Images/vanced-logo2.png"
               alt="Vanced Solution Logo"
-              height="40"
             />
           </a>
         </div>
@@ -460,35 +459,61 @@
             <a href="#" class="booking-btn book-audit"><i class="fa-regular fa-file-lines"></i> Book a Technical Audit</a>
           </div>
           <div class="form-wrapper">
-            <form class="form">
-              <div class="form-row">
-                <div class="field-group">
-                  <label class="text-uppercase">Full Name</label>
-                  <input type="text" placeholder="Alexander Graham" />
-                </div>
+            <form
+                  class="form"
+                  id="contact-form"
+                  method="post"
+                  action="contact.php"
+                >
+                  <div class="form-row">
+                    <div class="field-group">
+                      <label>FULL NAME</label>
+                      <input
+                        id="form_name"
+                        name="name"
+                        type="text"
+                        placeholder="John Doe"
+                        required
+                      />
+                    </div>
 
-                <div class="field-group">
-                  <label class="text-uppercase">Company Email</label>
-                  <input type="email" placeholder="alex@company.com" />
-                </div>
-              </div>
+                    <div class="field-group">
+                      <label>EMAIL</label>
+                      <input
+                        id="form_email"
+                        name="email"
+                        type="email"
+                        placeholder="example@email.com"
+                        required
+                      />
+                    </div>
+                  </div>
 
-              <div class="field-group">
-                <label class="text-uppercase">Service Interest</label>
-                <select>
-                  <option>Software Development</option>
-                  <option>Web Development</option>
-                  <option>App Development</option>
-                </select>
-              </div>
+                  <div class="field-group">
+                    <label>SUBJECT</label>
+                    <input
+                      id="form_subject"
+                      name="subject"
+                      type="text"
+                      placeholder="Subject"
+                      required
+                    />
+                  </div>
 
-              <div class="field-group">
-                <label class="text-uppercase">Mission Brief</label>
-                <textarea placeholder="Describe your project goals..."></textarea>
-              </div>
+                  <div class="field-group">
+                    <label>MESSAGE</label>
+                    <textarea
+                      id="form_message"
+                      name="message"
+                      placeholder="Brief project description..."
+                      required
+                    ></textarea>
+                  </div>
 
-              <button class="booking-btn">Submit Mission Brief</button>
-            </form>
+                  <button type="submit" class="booking-btn">
+                    Request Consultation
+                  </button>
+                </form>
           </div>
         </div>
       </div>
@@ -517,10 +542,10 @@
                         <div>
               <h5 class="mb-24 fs-16 fw-semibold text-uppercase">Capabilities</h5>
               <ul class="list-unstyled mb-0">
-                <li class="mb-3"><a href="services-ai.html" class="fs-14 text-gray text-decoration-none">Generative AI</a></li>
-                <li class="mb-3"><a href="services-mobile.html" class="fs-14 text-gray text-decoration-none">Mobile Apps</a></li>
-                <li class="mb-3"><a href="services-analytics.html" class="fs-14 text-gray text-decoration-none">Data Analytics</a></li>
-                <li><a href="services-cloud.html" class="fs-14 text-gray text-decoration-none">Cloud Solutions</a></li>
+                <li class="mb-3"><a href="/services/generative-ai-solutions.html" class="fs-14 text-gray text-decoration-none">Generative AI</a></li>
+                <li class="mb-3"><a href="/services/mobile-app-development.html" class="fs-14 text-gray text-decoration-none">Mobile Apps</a></li>
+                <li class="mb-3"><a href="/services/data-analytics.html" class="fs-14 text-gray text-decoration-none">Data Analytics</a></li>
+                <li><a href="/services/cloud-chatbot-iot-solutions.html" class="fs-14 text-gray text-decoration-none">Cloud Solutions</a></li>
               </ul>
             </div>
             <div>

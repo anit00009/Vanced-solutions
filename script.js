@@ -1,47 +1,109 @@
-const menuToggle = document.getElementById("menuToggle");
-const mobileNav = document.getElementById("mobileNav");
-const mobileLinks = document.querySelectorAll(".mobile-nav-link");
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const mobileNav = document.getElementById("mobileNav");
+    if (!menuToggle || !mobileNav) return;
 
-function toggleMenu() {
-    menuToggle.classList.toggle("active");
-    mobileNav.classList.toggle("active");
-    document.body.style.overflow = mobileNav.classList.contains("active")
-        ? "hidden"
-        : "";
-}
+    const content = mobileNav.querySelector(".mobile-nav-content");
+    if (!content) return;
 
-menuToggle.addEventListener("click", toggleMenu);
+    function closeMenu() {
+        mobileNav.classList.remove("active");
+        document.body.style.overflow = "";
+    }
 
-mobileLinks.forEach((link) => {
-    link.addEventListener("click", (e) => {
-        const isToggle = link.classList.contains("mobile-services-toggle") || 
-                         link.classList.contains("mobile-about-toggle") || 
-                         link.classList.contains("mobile-resources-toggle");
+    function openMenu() {
+        mobileNav.classList.add("active");
+        document.body.style.overflow = "hidden";
+    }
 
-        if (isToggle) {
-            // Only prevent default if clicking the chevron icon
-            if (e.target.tagName === "I" || e.target.closest("i")) {
-                e.preventDefault();
-                const subMenu = link.nextElementSibling;
-                if (subMenu) {
-                    subMenu.classList.toggle("active");
-                    link.classList.toggle("active");
-                }
+    function toggleMenu() {
+        if (mobileNav.classList.contains("active")) closeMenu();
+        else openMenu();
+    }
+
+    if (!content.querySelector(".mobile-nav-topbar")) {
+        const logoA = document.querySelector(".header .company-logo a");
+        const logoImg = document.querySelector(".header .company-logo img");
+        const topbar = document.createElement("div");
+        topbar.className = "mobile-nav-topbar";
+        const href = logoA ? logoA.getAttribute("href") : "index.html";
+        const src = logoImg ? logoImg.getAttribute("src") : "";
+        const alt = logoImg
+            ? logoImg.getAttribute("alt") || "Vanced Solutions"
+            : "Vanced Solutions";
+        topbar.innerHTML = `<a href="${href}" class="mobile-nav-logo-link"><img src="${src}" alt="${alt}" /></a><button type="button" class="mobile-nav-close" id="mobileNavClose" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>`;
+        content.insertBefore(topbar, content.firstChild);
+    }
+
+    document
+        .getElementById("mobileNavClose")
+        ?.addEventListener("click", closeMenu);
+
+    content.querySelectorAll(".mobile-nav-list > li").forEach((li) => {
+        const sub = li.querySelector(":scope > .mobile-sub-menu");
+        const link = li.querySelector(":scope > a.mobile-nav-link");
+        if (!sub || !link || li.querySelector(".mobile-nav-row")) return;
+
+        const row = document.createElement("div");
+        row.className = "mobile-nav-row";
+        const icon = link.querySelector("i");
+        if (icon) icon.remove();
+
+        link.classList.remove(
+            "mobile-about-toggle",
+            "mobile-services-toggle",
+            "mobile-resources-toggle"
+        );
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "mobile-nav-submenu-toggle";
+        const isOpen = sub.classList.contains("active");
+        btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        btn.setAttribute("aria-label", "Toggle submenu");
+        btn.innerHTML =
+            '<i class="fa-solid fa-chevron-down" aria-hidden="true"></i>';
+
+        row.appendChild(link);
+        row.appendChild(btn);
+        li.insertBefore(row, sub);
+
+        if (isOpen) li.classList.add("submenu-open");
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            const open = sub.classList.toggle("active");
+            li.classList.toggle("submenu-open", open);
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+    });
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    mobileNav.querySelectorAll("a[href]").forEach((a) => {
+        a.addEventListener("click", () => {
+            const href = a.getAttribute("href") || "";
+            if (href.startsWith("#")) {
+                closeMenu();
                 return;
             }
-        }
-        
-        // If it's a regular link or clicking the text of a toggle link, allow navigation
-        if (mobileNav.classList.contains("active")) {
-            // Keep menu open for navigation, or close it if it's a hash link
-            if (link.getAttribute("href").startsWith("#")) {
-                toggleMenu();
-            }
-        }
+            closeMenu();
+        });
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mobileNav.classList.contains("active"))
+            closeMenu();
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 992) closeMenu();
     });
 });
 
 // Step Navigation Logic
+if (document.getElementById("contact-steps-section")) {
 const counters = document.querySelectorAll(".counter");
 const nextBtn = document.querySelector(".next-step-btn");
 const backBtn = document.querySelector(".light-btn");
@@ -175,3 +237,4 @@ backBtn.addEventListener("click", () => {
 
 // Initialize listeners for initial HTML state
 attachCardListeners();
+}
