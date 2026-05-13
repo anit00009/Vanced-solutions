@@ -238,3 +238,368 @@ backBtn.addEventListener("click", () => {
 // Initialize listeners for initial HTML state
 attachCardListeners();
 }
+
+const blogDefaults = [
+    {
+        id: "building-scalable-digital-platforms",
+        title: "Building Scalable Digital Platforms for Modern Businesses",
+        category: "Future Tech",
+        excerpt: "Learn how modern architectures can support business growth and handle increasing user demands.",
+        image: "Images/en-insight-img1.png",
+        author: "Vanced Solutions",
+        date: "2026-05-12",
+        readTime: "6 min read",
+        content: [
+            "Scalable digital platforms start with a clear understanding of business goals, user behavior, and the operational demands that will grow over time.",
+            "Modern architecture favors modular systems, clean APIs, reliable observability, and a deployment model that can evolve without slowing the business down.",
+            "The best platform decisions are rarely only technical. They connect product strategy, engineering discipline, data visibility, and support workflows into one maintainable system."
+        ]
+    },
+    {
+        id: "why-user-experience-matters",
+        title: "Why User Experience Matters in Web Development",
+        category: "Expert Insights",
+        excerpt: "Discover the critical role of UI/UX design in driving customer engagement and retention.",
+        image: "Images/en-insight-img2.png",
+        author: "Vanced Solutions",
+        date: "2026-05-12",
+        readTime: "5 min read",
+        content: [
+            "User experience is the bridge between technical capability and customer value. A fast, stable product still needs clear flows, readable content, and helpful interactions.",
+            "Strong UX reduces friction, builds confidence, and helps users finish important tasks without second-guessing the interface.",
+            "For growing businesses, thoughtful experience design can improve conversion, reduce support requests, and make every marketing campaign work harder."
+        ]
+    },
+    {
+        id: "modern-web-technologies-shaping-growth",
+        title: "Modern Web Technologies Shaping Digital Growth",
+        category: "Modern Technology",
+        excerpt: "Explore the tools and frameworks that are defining the future of digital product development.",
+        image: "Images/en-insight-img3.png",
+        author: "Vanced Solutions",
+        date: "2026-05-12",
+        readTime: "7 min read",
+        content: [
+            "Modern web development is shaped by performance-first frameworks, cloud-native hosting, API-driven systems, and richer front-end experiences.",
+            "Teams that choose stable technology foundations can ship faster while keeping maintenance predictable.",
+            "The goal is not to chase every new tool. The goal is to build a stack that supports the product, the team, and the business model."
+        ]
+    },
+    {
+        id: "aws-vs-azure-for-startups",
+        title: "Navigating the Cloud: AWS vs. Azure for Startups",
+        category: "Development",
+        excerpt: "A practical comparison to help you choose the right cloud provider for your business.",
+        image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+        author: "Vanced Solutions",
+        date: "2026-05-12",
+        readTime: "8 min read",
+        content: [
+            "AWS and Azure both offer mature cloud services, global infrastructure, and strong security capabilities. The right choice depends on your team, integrations, budget, and roadmap.",
+            "AWS is often favored for broad service coverage and startup ecosystem depth. Azure is a natural fit for teams already invested in Microsoft tools and enterprise workflows.",
+            "Startups should evaluate hosting, database, monitoring, identity, deployment, and support requirements before committing to a provider."
+        ]
+    }
+];
+
+const blogStorageKey = "vanced-blog-posts";
+
+function getPlainTextFromContent(content) {
+    if (Array.isArray(content)) return content.join("\n\n");
+    return content || "";
+}
+
+function escapeHtml(value) {
+    return String(value || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+
+function slugify(value) {
+    return String(value || "")
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "") || `post-${Date.now()}`;
+}
+
+function formatBlogDate(value) {
+    if (!value) return "";
+    const date = new Date(`${value}T00:00:00`);
+    if (Number.isNaN(date.getTime())) return value;
+    return date.toLocaleDateString("en", { year: "numeric", month: "short", day: "numeric" });
+}
+
+function normalizePost(post) {
+    const contentText = getPlainTextFromContent(post.content);
+    return {
+        id: post.id || slugify(post.title),
+        title: post.title || "Untitled Blog Post",
+        category: post.category || "Insights",
+        excerpt: post.excerpt || contentText.slice(0, 150),
+        image: post.image || "Images/en-insight-img1.png",
+        author: post.author || "Vanced Solutions",
+        date: post.date || new Date().toISOString().slice(0, 10),
+        readTime: post.readTime || post.read_time || "5 min read",
+        content: contentText
+            .split(/\n{2,}/)
+            .map((paragraph) => paragraph.trim())
+            .filter(Boolean)
+    };
+}
+
+async function loadBlogPosts() {
+    try {
+        const response = await fetch("blog-data.json", { cache: "no-store" });
+        if (response.ok) {
+            const data = await response.json();
+            if (Array.isArray(data.posts)) {
+                return data.posts.map(normalizePost);
+            }
+        }
+    } catch (error) {
+        // Local file previews can block fetch; localStorage/admin fallback still works.
+    }
+
+    const saved = localStorage.getItem(blogStorageKey);
+    if (saved) {
+        try {
+            const posts = JSON.parse(saved);
+            if (Array.isArray(posts)) return posts.map(normalizePost);
+        } catch (error) {
+            localStorage.removeItem(blogStorageKey);
+        }
+    }
+
+    return blogDefaults.map(normalizePost);
+}
+
+function saveBlogPostsLocally(posts) {
+    localStorage.setItem(blogStorageKey, JSON.stringify(posts.map(normalizePost)));
+}
+
+function renderBlogCards(posts) {
+    const grid = document.querySelector("[data-blog-list]");
+    const emptyState = document.querySelector("[data-blog-empty]");
+    if (!grid) return;
+
+    if (!posts.length) {
+        grid.innerHTML = "";
+        if (emptyState) emptyState.hidden = false;
+        return;
+    }
+
+    if (emptyState) emptyState.hidden = true;
+    grid.innerHTML = posts.map((post) => `
+        <article class="blog-card">
+            <a href="blog-post.html?id=${encodeURIComponent(post.id)}" class="blog-card-media position-relative overflow-hidden rounded-4 mb-24 shadow-sm d-block">
+                <img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.title)}" class="w-100 object-fit-cover" style="height: 240px;">
+                <span class="badge-item card_third fs-10 position-absolute top-0 end-0 m-3">${escapeHtml(post.category)}</span>
+            </a>
+            <div class="d-flex gap-3 flex-wrap fs-12 text-gray mb-12">
+                <span>${escapeHtml(formatBlogDate(post.date))}</span>
+                <span>${escapeHtml(post.readTime)}</span>
+            </div>
+            <h3 class="fs-22 fw-bold mb-16">${escapeHtml(post.title)}</h3>
+            <p class="fs-14 text-gray mb-24">${escapeHtml(post.excerpt)}</p>
+            <a href="blog-post.html?id=${encodeURIComponent(post.id)}" class="link-btn fw-bold text-decoration-none">Read Article <i class="fa-solid fa-arrow-right ms-1"></i></a>
+        </article>
+    `).join("");
+}
+
+function renderFeaturedPosts(posts) {
+    const grid = document.querySelector("[data-featured-blogs]");
+    if (!grid) return;
+
+    grid.innerHTML = posts.slice(0, 3).map((post) => `
+        <a href="blog-post.html?id=${encodeURIComponent(post.id)}" class="engineering-insights-card text-decoration-none text-dark">
+            <img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.title)}" />
+            <p class="fs-10 fw-semibold mb-12">${escapeHtml(post.category)}</p>
+            <h3 class="fs-20 fw-bold mb-0">${escapeHtml(post.title)}</h3>
+        </a>
+    `).join("");
+}
+
+function renderBlogPost(posts) {
+    const article = document.querySelector("[data-blog-post]");
+    if (!article) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const post = posts.find((item) => item.id === params.get("id")) || posts[0];
+    if (!post) {
+        article.innerHTML = `<div class="container"><p class="fs-18 text-gray mb-0">No blog post found.</p></div>`;
+        return;
+    }
+
+    document.title = `${post.title} | Vanced Solutions`;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.setAttribute("content", post.excerpt);
+
+    article.innerHTML = `
+        <section class="blog-detail-hero bg-soft-gray">
+            <div class="container">
+                <a href="blog.html" class="link-btn fw-bold text-decoration-none d-flex align-items-center gap-2 mb-32 w-fit-content">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Blog
+                </a>
+                <span class="badge-item card_one d-block fs-12 fw-semibold mb-24 w-fit-content">${escapeHtml(post.category)}</span>
+                <h1 class="main-heading fs-72 mb-24">${escapeHtml(post.title)}</h1>
+                <div class="d-flex gap-3 flex-wrap fs-14 text-gray">
+                    <span>${escapeHtml(post.author)}</span>
+                    <span>${escapeHtml(formatBlogDate(post.date))}</span>
+                    <span>${escapeHtml(post.readTime)}</span>
+                </div>
+            </div>
+        </section>
+        <section class="bg-white bg-light">
+            <div class="container blog-detail-container">
+                <img src="${escapeHtml(post.image)}" alt="${escapeHtml(post.title)}" class="blog-detail-image mb-48">
+                <div class="blog-detail-content">
+                    ${post.content.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join("")}
+                </div>
+            </div>
+        </section>
+    `;
+}
+
+function renderAdminPosts(posts) {
+    const list = document.querySelector("[data-admin-posts]");
+    if (!list) return;
+
+    list.innerHTML = posts.map((post) => `
+        <div class="admin-post-row" data-post-id="${escapeHtml(post.id)}">
+            <div>
+                <h3 class="fs-18 fw-bold mb-1">${escapeHtml(post.title)}</h3>
+                <p class="fs-12 text-gray mb-0">${escapeHtml(post.category)} | ${escapeHtml(formatBlogDate(post.date))}</p>
+            </div>
+            <div class="d-flex gap-2">
+                <button class="light-btn admin-edit-btn" type="button" data-edit-post="${escapeHtml(post.id)}"><i class="fa-solid fa-pen"></i></button>
+                <button class="light-btn admin-delete-btn" type="button" data-delete-post="${escapeHtml(post.id)}"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </div>
+    `).join("");
+}
+
+function initBlogAdmin(posts) {
+    const form = document.querySelector("[data-blog-admin-form]");
+    if (!form) return;
+
+    let currentPosts = [...posts];
+    const status = document.querySelector("[data-admin-status]");
+    const setStatus = (message, type = "info") => {
+        if (!status) return;
+        status.textContent = message;
+        status.dataset.type = type;
+    };
+
+    const fillForm = (post) => {
+        form.elements.id.value = post.id;
+        form.elements.title.value = post.title;
+        form.elements.category.value = post.category;
+        form.elements.excerpt.value = post.excerpt;
+        form.elements.image.value = post.image;
+        form.elements.author.value = post.author;
+        form.elements.date.value = post.date;
+        form.elements.readTime.value = post.readTime;
+        form.elements.content.value = getPlainTextFromContent(post.content);
+        form.elements.title.focus();
+    };
+
+    const clearForm = () => {
+        form.reset();
+        form.elements.id.value = "";
+        form.elements.author.value = "Vanced Solutions";
+        form.elements.date.value = new Date().toISOString().slice(0, 10);
+        form.elements.readTime.value = "5 min read";
+    };
+
+    const persistPosts = async (postsToSave) => {
+        saveBlogPostsLocally(postsToSave);
+        const password = form.elements.password.value.trim();
+        if (!password) {
+            setStatus("Saved in this browser. Add the admin password to publish into blog-data.json on PHP hosting.", "warning");
+            return;
+        }
+
+        const response = await fetch("blog-api.php", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ password, posts: postsToSave })
+        });
+        const result = await response.json();
+        if (!response.ok || !result.success) {
+            throw new Error(result.message || "Could not publish posts.");
+        }
+        setStatus("Published successfully. Your blog-data.json file has been updated.", "success");
+    };
+
+    renderAdminPosts(currentPosts);
+    clearForm();
+
+    form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const post = normalizePost({
+            id: formData.get("id") || slugify(formData.get("title")),
+            title: formData.get("title"),
+            category: formData.get("category"),
+            excerpt: formData.get("excerpt"),
+            image: formData.get("image"),
+            author: formData.get("author"),
+            date: formData.get("date"),
+            readTime: formData.get("readTime"),
+            content: formData.get("content")
+        });
+
+        const existingIndex = currentPosts.findIndex((item) => item.id === post.id);
+        if (existingIndex >= 0) {
+            currentPosts[existingIndex] = post;
+        } else {
+            currentPosts = [post, ...currentPosts];
+        }
+
+        try {
+            await persistPosts(currentPosts);
+            renderAdminPosts(currentPosts);
+            renderBlogCards(currentPosts);
+            clearForm();
+        } catch (error) {
+            setStatus(error.message, "danger");
+        }
+    });
+
+    document.addEventListener("click", async (event) => {
+        const editButton = event.target.closest("[data-edit-post]");
+        const deleteButton = event.target.closest("[data-delete-post]");
+
+        if (editButton) {
+            const post = currentPosts.find((item) => item.id === editButton.dataset.editPost);
+            if (post) fillForm(post);
+        }
+
+        if (deleteButton) {
+            const id = deleteButton.dataset.deletePost;
+            currentPosts = currentPosts.filter((post) => post.id !== id);
+            try {
+                await persistPosts(currentPosts);
+                renderAdminPosts(currentPosts);
+            } catch (error) {
+                setStatus(error.message, "danger");
+            }
+        }
+    });
+
+    const resetButton = document.querySelector("[data-admin-reset]");
+    if (resetButton) {
+        resetButton.addEventListener("click", clearForm);
+    }
+}
+
+loadBlogPosts().then((posts) => {
+    renderBlogCards(posts);
+    renderFeaturedPosts(posts);
+    renderBlogPost(posts);
+    initBlogAdmin(posts);
+});

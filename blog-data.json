@@ -1,0 +1,64 @@
+{
+  "posts": [
+    {
+      "id": "building-scalable-digital-platforms",
+      "title": "Building Scalable Digital Platforms for Modern Businesses",
+      "category": "Future Tech",
+      "excerpt": "Learn how modern architectures can support business growth and handle increasing user demands.",
+      "image": "Images/en-insight-img1.png",
+      "author": "Vanced Solutions",
+      "date": "2026-05-12",
+      "readTime": "6 min read",
+      "content": [
+        "Scalable digital platforms start with a clear understanding of business goals, user behavior, and the operational demands that will grow over time.",
+        "Modern architecture favors modular systems, clean APIs, reliable observability, and a deployment model that can evolve without slowing the business down.",
+        "The best platform decisions are rarely only technical. They connect product strategy, engineering discipline, data visibility, and support workflows into one maintainable system."
+      ]
+    },
+    {
+      "id": "why-user-experience-matters",
+      "title": "Why User Experience Matters in Web Development",
+      "category": "Expert Insights",
+      "excerpt": "Discover the critical role of UI/UX design in driving customer engagement and retention.",
+      "image": "Images/en-insight-img2.png",
+      "author": "Vanced Solutions",
+      "date": "2026-05-12",
+      "readTime": "5 min read",
+      "content": [
+        "User experience is the bridge between technical capability and customer value. A fast, stable product still needs clear flows, readable content, and helpful interactions.",
+        "Strong UX reduces friction, builds confidence, and helps users finish important tasks without second-guessing the interface.",
+        "For growing businesses, thoughtful experience design can improve conversion, reduce support requests, and make every marketing campaign work harder."
+      ]
+    },
+    {
+      "id": "modern-web-technologies-shaping-growth",
+      "title": "Modern Web Technologies Shaping Digital Growth",
+      "category": "Modern Technology",
+      "excerpt": "Explore the tools and frameworks that are defining the future of digital product development.",
+      "image": "Images/en-insight-img3.png",
+      "author": "Vanced Solutions",
+      "date": "2026-05-12",
+      "readTime": "7 min read",
+      "content": [
+        "Modern web development is shaped by performance-first frameworks, cloud-native hosting, API-driven systems, and richer front-end experiences.",
+        "Teams that choose stable technology foundations can ship faster while keeping maintenance predictable.",
+        "The goal is not to chase every new tool. The goal is to build a stack that supports the product, the team, and the business model."
+      ]
+    },
+    {
+      "id": "aws-vs-azure-for-startups",
+      "title": "Navigating the Cloud: AWS vs. Azure for Startups",
+      "category": "Development",
+      "excerpt": "A practical comparison to help you choose the right cloud provider for your business.",
+      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=2072&auto=format&fit=crop",
+      "author": "Vanced Solutions",
+      "date": "2026-05-12",
+      "readTime": "8 min read",
+      "content": [
+        "AWS and Azure both offer mature cloud services, global infrastructure, and strong security capabilities. The right choice depends on your team, integrations, budget, and roadmap.",
+        "AWS is often favored for broad service coverage and startup ecosystem depth. Azure is a natural fit for teams already invested in Microsoft tools and enterprise workflows.",
+        "Startups should evaluate hosting, database, monitoring, identity, deployment, and support requirements before committing to a provider."
+      ]
+    }
+  ]
+}
