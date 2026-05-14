@@ -505,12 +505,12 @@ h6 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.hero-btns button {
+.hero-btns a {
   font-size: 16px;
   padding: 16px 32px;
   line-height: 24px;
 }
-.hero-btns button.hero-btn1 {
+.hero-btns a.hero-btn1 {
   padding: 17px 32px;
 }
 
@@ -1058,8 +1058,9 @@ h6 {
 }
 
 .performance-metrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .performance-metrics h4 {
   font-weight: 900;
