@@ -504,6 +504,10 @@ function initBlogAdmin(posts) {
         form.elements.date.value = post.date;
         form.elements.readTime.value = post.readTime;
         form.elements.content.value = getPlainTextFromContent(post.content);
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.innerText = "Save Edits";
+        
         form.elements.title.focus();
     };
 
@@ -513,26 +517,49 @@ function initBlogAdmin(posts) {
         form.elements.author.value = "Vanced Solutions";
         form.elements.date.value = new Date().toISOString().slice(0, 10);
         form.elements.readTime.value = "5 min read";
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) submitBtn.innerText = "Publish Post";
     };
 
     const persistPosts = async (postsToSave) => {
         saveBlogPostsLocally(postsToSave);
-        const password = form.elements.password.value.trim();
+        let password = form.elements.password.value.trim();
+        
         if (!password) {
-            setStatus("Saved in this browser. Add the admin password to publish into blog-data.json on PHP hosting.", "warning");
-            return;
+            password = prompt("Please enter the Admin Password to publish this change to the server:");
+            if (!password) {
+                setStatus("Saved in this browser only. Add the admin password to save permanently on the Node.js server.", "warning");
+                return;
+            }
+            form.elements.password.value = password; // Temporarily set it
         }
 
-        const response = await fetch("blog-api.php", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ password, posts: postsToSave })
-        });
-        const result = await response.json();
-        if (!response.ok || !result.success) {
-            throw new Error(result.message || "Could not publish posts.");
+        try {
+            const response = await fetch("/api/blog", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ password, posts: postsToSave })
+            });
+
+            const text = await response.text();
+            let result;
+            try {
+                result = JSON.parse(text);
+            } catch (e) {
+                if (!response.ok) {
+                    throw new Error(`Server Error (${response.status}): ${response.statusText}`);
+                }
+                throw new Error("Invalid response from server. Make sure your hosting supports PHP.");
+            }
+
+            if (!response.ok || !result.success) {
+                throw new Error(result.message || "Could not publish posts.");
+            }
+            setStatus("Published successfully. Your blog-data.json file has been updated.", "success");
+        } catch (error) {
+            throw error;
         }
-        setStatus("Published successfully. Your blog-data.json file has been updated.", "success");
     };
 
     renderAdminPosts(currentPosts);
@@ -581,12 +608,22 @@ function initBlogAdmin(posts) {
 
         if (deleteButton) {
             const id = deleteButton.dataset.deletePost;
-            currentPosts = currentPosts.filter((post) => post.id !== id);
-            try {
-                await persistPosts(currentPosts);
-                renderAdminPosts(currentPosts);
-            } catch (error) {
-                setStatus(error.message, "danger");
+            let password = form.elements.password.value.trim();
+            
+            if (!password) {
+                password = prompt("Please enter the Admin Password to delete this post from the server:");
+                if (!password) return; // User cancelled
+                form.elements.password.value = password; // temporarily set it so persistPosts can use it
+            }
+
+            if (confirm("Are you sure you want to permanently delete this post?")) {
+                currentPosts = currentPosts.filter((post) => post.id !== id);
+                try {
+                    await persistPosts(currentPosts);
+                    renderAdminPosts(currentPosts);
+                } catch (error) {
+                    setStatus(error.message, "danger");
+                }
             }
         }
     });
@@ -602,4 +639,44 @@ loadBlogPosts().then((posts) => {
     renderFeaturedPosts(posts);
     renderBlogPost(posts);
     initBlogAdmin(posts);
+});
+
+// Contact Form AJAX Handler
+document.addEventListener("DOMContentLoaded", () => {
+    const contactForms = document.querySelectorAll('form[action="/api/contact"]');
+    
+    contactForms.forEach(form => {
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault(); // Prevent the browser from navigating to the raw JSON page
+            
+            const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
+            const originalBtnText = submitBtn ? submitBtn.innerText : '';
+            if (submitBtn) submitBtn.innerText = "Sending...";
+            
+            try {
+                const formData = new URLSearchParams(new FormData(form));
+                
+                const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.type === 'success') {
+                    alert(result.message);
+                    form.reset();
+                } else {
+                    alert("Error: " + result.message);
+                }
+            } catch (error) {
+                alert("There was an error sending your message. Please try again later.");
+            } finally {
+                if (submitBtn) submitBtn.innerText = originalBtnText;
+            }
+        });
+    });
 });
