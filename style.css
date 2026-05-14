@@ -1675,8 +1675,10 @@ textarea {
   padding-top: var(--space-xl);
   border-top: 1px solid #c5c6cd26;
 }
+.back-step-btn,
 .next-step-btn {
   padding: 16px 40px;
+  line-height: 20px;
 }
 .detail-card {
   background-color: #3f1f710d;
@@ -2838,6 +2840,9 @@ textarea {
   }
 
   /* contact page */
+  .contact-tab-section {
+    padding: var(--space-xl);
+  }
   .contact-tab-section h2 {
     font-size: 24px;
   }
