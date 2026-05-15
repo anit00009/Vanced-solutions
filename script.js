@@ -536,7 +536,7 @@ function initBlogAdmin(posts) {
         }
 
         try {
-            const response = await fetch("/api/blog", {
+            const response = await fetch("api/blog.php", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ password, posts: postsToSave })
@@ -612,7 +612,7 @@ function initBlogAdmin(posts) {
             
             if (!password) {
                 password = prompt("Please enter the Admin Password to delete this post from the server:");
-                if (!password) return; // User cancelled
+                if (!password) return;
                 form.elements.password.value = password; // temporarily set it so persistPosts can use it
             }
 
@@ -643,7 +643,7 @@ loadBlogPosts().then((posts) => {
 
 // Contact Form AJAX Handler
 document.addEventListener("DOMContentLoaded", () => {
-    const contactForms = document.querySelectorAll('form[action="/api/contact"]');
+    const contactForms = document.querySelectorAll('form[action="/api/contact"], form[action="api/contact"], form[action="./api/contact"], form[action="api/contact.php"]');
     
     contactForms.forEach(form => {
         form.addEventListener("submit", async (e) => {
@@ -656,7 +656,7 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 const formData = new URLSearchParams(new FormData(form));
                 
-                const response = await fetch("/api/contact", {
+                const response = await fetch(form.getAttribute('action') || "api/contact.php", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded"

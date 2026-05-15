@@ -1,6 +1,19 @@
 {
   "posts": [
     {
+      "id": "test",
+      "title": "test",
+      "category": "test",
+      "excerpt": "test",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+      "author": "Vanced Solutions",
+      "date": "2026-05-15",
+      "readTime": "5 min read",
+      "content": [
+        "test"
+      ]
+    },
+    {
       "id": "building-scalable-digital-platforms",
       "title": "Building Scalable Digital Platforms for Modern Businesses",
       "category": "Future Tech",

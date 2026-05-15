@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static(__dirname));
 
 
-app.post('/api/blog', (req, res) => {
+app.post(['/api/blog', '/api/blog.php'], (req, res) => {
     const adminPassword = process.env.BLOG_ADMIN_PASSWORD || 'change-this-password';
     const payload = req.body;
 
@@ -68,7 +68,7 @@ app.post('/api/blog', (req, res) => {
 const nodemailer = require('nodemailer');
 
 
-app.post('/api/contact', express.urlencoded({ extended: true }), async (req, res) => {
+app.post(['/api/contact', '/api/contact.php'], express.urlencoded({ extended: true }), async (req, res) => {
     const { name, email, subject, message } = req.body;
     
     const transporter = nodemailer.createTransport({
