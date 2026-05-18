@@ -35,7 +35,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 $configFile = __DIR__ . '/config.php';
 $config = file_exists($configFile) ? require $configFile : [];
 
-$to = $config['to_email'] ?? 'hr@vancedsolutions.com';
+$to = $config['to_email'] ?? 'thakuranit515@gmail.com';
 $fromEmail = $config['from_email'] ?? 'noreply@vancedsolutions.com';
 $fromName = $config['from_name'] ?? 'Vanced Solutions Website';
 $emailSubject = 'New Contact Form: ' . ($subject !== '' ? $subject : 'No subject');

@@ -2,7 +2,7 @@
 
 function send_smtp_mail(array $smtp, $to, $subject, $body, $replyTo = null, $fromEmail = null, $fromName = null)
 {
-    $host = $smtp['host'] ?? 'smtp.gmail.com';
+    $host = $smtp['host'] ?? 'thakuranit515@gmail.com';
     $port = (int)($smtp['port'] ?? 587);
     $username = $smtp['username'] ?? '';
     $password = $smtp['password'] ?? '';

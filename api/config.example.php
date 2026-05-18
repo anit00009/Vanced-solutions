@@ -4,7 +4,7 @@
  * Create one at: https://myaccount.google.com/apppasswords
  */
 return [
-    'to_email' => 'hr@vancedsolutions.com',
+    'to_email' => 'thakuranit515@gmail.com',
     'from_email' => 'noreply@vancedsolutions.com',
     'from_name' => 'Vanced Solutions Website',
     'smtp' => [

@@ -1,13 +1,13 @@
 <?php
 return [
     'to_email' => 'thakuranit515@gmail.com',
-    'from_email' => 'noreply@vancedsolutions.com',
-    'from_name' => 'Vanced Solutions',
+    'from_email' => 'thakuranit515@gmail.com',
+    'from_name' => 'Vanced Solutions Website',
     'smtp' => [
         'enabled' => true,
-        'host' => 'thakuranit515@gmail.com',
+        'host' => 'smtp.gmail.com',
         'port' => 587,
-        'username' => '',
+        'username' => 'thakuranit515@gmail.com',
         'password' => '',
         'encryption' => 'tls',
     ],
