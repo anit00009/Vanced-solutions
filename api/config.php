@@ -8,7 +8,7 @@ return [
         'host' => 'smtp.gmail.com',
         'port' => 587,
         'username' => 'thakuranit515@gmail.com',
-        'password' => '',
+        'password' => 'dagx rudq qohq gfzq',
         'encryption' => 'tls',
     ],
 ];

@@ -11,8 +11,8 @@ return [
         'enabled' => true,
         'host' => 'smtp.gmail.com',
         'port' => 587,
-        'username' => 'your@gmail.com',
-        'password' => 'your-gmail-app-password',
+        'username' => 'thakuranit515@gmail.com',
+        'password' => 'dagx rudq qohq gfzq',
         'encryption' => 'tls',
     ],
 ];
