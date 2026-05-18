@@ -1,11 +1,11 @@
 <?php
 return [
-    'to_email' => 'hr@vancedsolutions.com',
+    'to_email' => 'thakuranit515@gmail.com',
     'from_email' => 'noreply@vancedsolutions.com',
-    'from_name' => 'Vanced Solutions Website',
+    'from_name' => 'Vanced Solutions',
     'smtp' => [
         'enabled' => true,
-        'host' => 'smtp.gmail.com',
+        'host' => 'thakuranit515@gmail.com',
         'port' => 587,
         'username' => '',
         'password' => '',
