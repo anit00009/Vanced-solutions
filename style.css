@@ -522,7 +522,6 @@ h6 {
   letter-spacing: 1px;
   display: inline-block;
   text-transform: uppercase;
-  white-space: nowrap;
   width: fit-content;
 }
 
@@ -2402,6 +2401,10 @@ textarea {
   background-color: rgba(63, 31, 113, 0.05);
 }
 
+.portfolio-contact-container.bg-primary-gradient .light-btn {
+  border: 1px solid #ffffff40;
+}
+
 /************ team page css *************/
 .team-hero-img {
   aspect-ratio: 2 / 1.74;
@@ -2558,11 +2561,11 @@ textarea {
 }
 .global-map .location-pill.london-pill {
   top: 25%;
-  left: 25%;
+  left: 18%;
 }
 .global-map .location-pill.austin-pill {
   bottom: 28%;
-  left: 33%;
+  left: 26%;
 }
 .global-map .location-pill.singapore-pill {
   top: 33%;
@@ -2743,6 +2746,11 @@ textarea {
   .global-reach-section {
     padding-bottom: 70px;
   }
+
+  /* insights page */
+  .insight_2_content_wrapper {
+    padding: 48px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2817,7 +2825,7 @@ textarea {
     left: 8%;
   }
   .global-map .location-pill.austin-pill {
-    bottom: 22%;
+    bottom: 40%;
     left: 15%;
   }
   .global-map .location-pill.singapore-pill {
@@ -2826,8 +2834,9 @@ textarea {
   }
 
   .active-box {
-    bottom: 32px;
-    right: 32px;
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
   }
 
   /* insight page */
@@ -2891,14 +2900,6 @@ textarea {
   }
   .behind-screen-col {
     padding: 32px;
-  }
-  .global-map .location-pill.austin-pill {
-    bottom: 40%;
-  }
-  .active-box {
-    bottom: 16px;
-    right: 16px;
-    left: 16px;
   }
 }
 
@@ -3005,14 +3006,6 @@ textarea {
   max-width: 480px;
   z-index: 2;
 }
-@media (max-width: 991px) {
-  .floating-quote-card {
-    position: static;
-    transform: none;
-    margin-top: 32px;
-    max-width: 100%;
-  }
-}
 .verified-badge-custom {
   background: white;
   padding: 24px;
@@ -3029,6 +3022,23 @@ textarea {
 .verified-badge-custom i {
   color: var(--primary-purple);
   font-size: 20px;
+}
+@media (max-width: 991px) {
+  .floating-quote-card {
+    position: static;
+    transform: none;
+    margin-top: 32px;
+    max-width: 100%;
+  }
+  .verified-badge-custom {
+    left: -10px;
+    bottom: -20px;
+  }
+}
+@media (max-width: 767px) {
+  .floating-quote-card {
+    padding: 32px;
+  }
 }
 .list-check-custom {
   list-style: none;
@@ -3159,6 +3169,12 @@ textarea {
 .process-item:last-child::after {
   display: none;
 }
+.service-overlay-card {
+  bottom: -30px; 
+  right: -10px; 
+  left: auto; 
+  width: 250px
+}
 
 /* Benefits Section */
 .benefit-card {
@@ -3278,7 +3294,8 @@ textarea {
 }
 @media (max-width: 991px) {
   .item-1 {
-    grid-column: span 12;
+    grid-column: span 6;
+    height: 350px;
   }
   .item-2 {
     grid-column: span 6;
@@ -3597,6 +3614,9 @@ textarea {
 }
 
 /********** blog dynamic styles *************/
+.blog-card-media img {
+  transition: 0.3s;
+}
 .blog-card:hover .blog-card-media img {
   transform: scale(1.04);
 }
