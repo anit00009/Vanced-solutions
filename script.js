@@ -529,7 +529,7 @@ function initBlogAdmin(posts) {
         if (!password) {
             password = prompt("Please enter the Admin Password to publish this change to the server:");
             if (!password) {
-                setStatus("Saved in this browser only. Add the admin password to save permanently on the Node.js server.", "warning");
+                setStatus("Saved in this browser only. Add the admin password to save permanently on the server.", "warning");
                 return;
             }
             form.elements.password.value = password; // Temporarily set it
@@ -641,39 +641,70 @@ loadBlogPosts().then((posts) => {
     initBlogAdmin(posts);
 });
 
+function getContactApiUrl(form) {
+    const action = (form.getAttribute("action") || "api/contact.php").trim();
+    if (/^https?:\/\//i.test(action)) {
+        return action;
+    }
+    return new URL(action, window.location.href).href;
+}
+
 // Contact Form AJAX Handler
 document.addEventListener("DOMContentLoaded", () => {
-    const contactForms = document.querySelectorAll('form[action="/api/contact"], form[action="api/contact"], form[action="./api/contact"], form[action="api/contact.php"]');
-    
-    contactForms.forEach(form => {
+    const contactForms = document.querySelectorAll(
+        "#contact-form, form[action*='contact.php'], form[action*='api/contact']"
+    );
+
+    contactForms.forEach((form) => {
+        if (form.dataset.contactBound === "true") return;
+        form.dataset.contactBound = "true";
+
         form.addEventListener("submit", async (e) => {
-            e.preventDefault(); // Prevent the browser from navigating to the raw JSON page
-            
+            e.preventDefault();
+
             const submitBtn = form.querySelector('button[type="submit"]') || form.querySelector('input[type="submit"]');
-            const originalBtnText = submitBtn ? submitBtn.innerText : '';
+            const originalBtnText = submitBtn ? submitBtn.innerText : "";
             if (submitBtn) submitBtn.innerText = "Sending...";
-            
+
             try {
                 const formData = new URLSearchParams(new FormData(form));
-                
-                const response = await fetch(form.getAttribute('action') || "api/contact.php", {
+                const response = await fetch(getContactApiUrl(form), {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded"
                     },
                     body: formData
                 });
-                
-                const result = await response.json();
-                
-                if (result.type === 'success') {
+
+                const raw = await response.text();
+                let result;
+                try {
+                    result = JSON.parse(raw);
+                } catch (parseError) {
+                    const isLiveServer =
+                        window.location.port === "5500" || window.location.port === "5501";
+
+                    if (response.status === 405 && isLiveServer) {
+                        throw new Error(
+                            "Live Server cannot run PHP. Double-click start-local.bat in your project folder, then open http://127.0.0.1:8000 (not port 5500)."
+                        );
+                    }
+
+                    throw new Error(
+                        response.ok
+                            ? "Invalid server response."
+                            : `Server error (${response.status}). On live hosting, upload api/contact.php and enable PHP. Locally, run start-local.bat and use http://127.0.0.1:8000`
+                    );
+                }
+
+                if (result.type === "success") {
                     alert(result.message);
                     form.reset();
                 } else {
-                    alert("Error: " + result.message);
+                    alert("Error: " + (result.message || "Could not send your message."));
                 }
             } catch (error) {
-                alert("There was an error sending your message. Please try again later.");
+                alert(error.message || "There was an error sending your message. Please try again later.");
             } finally {
                 if (submitBtn) submitBtn.innerText = originalBtnText;
             }
